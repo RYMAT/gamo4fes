@@ -1,0 +1,99 @@
+@import "../../../styles/variables";
+
+.header {
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-header {
+    display: flex;
+    padding: 5px 0;
+    .navbar-logo {
+      display: inline-block;
+      width: 130px;
+      height: 45px;
+      background-image: url($image-path + "/logo.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0 0 0 40px;
+      padding: 0;
+      > .list-item {
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+        color: $main-color;
+        cursor: pointer;
+        font-family: 'mamelon', sans-serif;
+        letter-spacing: .05em;
+        & + .list-item {
+          margin-left: 40px;
+        }
+        .nav-list-menu {
+          display: inline-block;
+          height: 40px;
+          margin: 0;
+          padding: 25px 0 0 0;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.list-item {
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'icomoon';
+    font-size: 19px;
+    line-height: 1;
+  }
+  &.item-live:before {
+    content: '\e90b';
+  }
+  &.item-food:before {
+    content: '\e91c';
+  }
+  &.item-event:before {
+    content: '\e90a';
+  }
+  &.item-access:before {
+    content: '\e913';
+  }
+  &.item-goods:before {
+    content: '\e91a';
+  }
+  &.item-news:before {
+    content: '\e910';
+  }
+}
+
+@supports not (backdrop-filter: blur()) {
+  .header {
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
