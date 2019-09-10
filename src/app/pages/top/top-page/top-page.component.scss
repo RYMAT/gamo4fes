@@ -171,25 +171,6 @@
   }
 }
 
-.btn-main {
-  width: 150px;
-  padding: 10px 12px;
-  background: transparent linear-gradient(260deg, #00A09B 0, #00B383 100%) 0 0 no-repeat padding-box;
-  border-radius: 36px;
-  text-align: center;
-  color: #fff;
-  border: none;
-  box-shadow: none;
-  font-size: 16px;
-  outline: none;
-  opacity: 1;
-  transition: opacity .2s ease-in 0s;
-  &:hover, &:focus {
-    opacity: 0.9;
-    transition: opacity .2s ease-in 0s;
-  }
-}
-
 /**
 * TimeTable ~
 */
