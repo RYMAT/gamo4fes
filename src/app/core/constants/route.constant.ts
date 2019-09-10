@@ -19,6 +19,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: '',
       titleJp: '',
+      description: 'トップページ',
       isIndex: true,
     }
   },
@@ -27,6 +28,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: 'live',
       titleJp: 'ライブ',
+      description: 'ライブ・出演者情報',
       isIndex: false,
     }
   },
@@ -35,6 +37,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: 'food',
       titleJp: 'フード',
+      description: 'フード・出店情報',
       isIndex: false,
     }
   },
@@ -43,6 +46,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: 'event',
       titleJp: 'イベント',
+      description: 'イベント情報',
       isIndex: false,
     }
   },
@@ -51,6 +55,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: 'access',
       titleJp: 'アクセス',
+      description: 'アクセス・エリアマップ',
       isIndex: false,
     }
   },
@@ -59,6 +64,7 @@ export const RouteConstant: IRoutePaths = {
     data: {
       title: 'goods',
       titleJp: 'グッズ',
+      description: 'グッズ情報',
       isIndex: false,
     }
   },
