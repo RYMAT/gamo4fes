@@ -110,6 +110,7 @@
     background-color: rgba($footer-color, 0.7);
     will-change: width;
     transition: width .2s ease 0s, color .2s ease 0s;
+    border-radius: 6px;
   }
   &:hover {
     color: rgba($main-color, 0.9);
@@ -123,8 +124,15 @@
   }
   &.is-active {
     color: $main-color;
+    .nav-list-menu {
+      cursor: default;
+    }
     &:before {
       color: $main-color;
+    }
+    &:after {
+      width: 6px;
+      transition: width .3s ease 0s;
     }
   }
 }
@@ -132,7 +140,7 @@
 @supports not (backdrop-filter: blur()) {
   .header {
     .navbar {
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.85);
     }
   }
 }

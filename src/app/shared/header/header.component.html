@@ -5,7 +5,8 @@
         <a class="navbar-logo" [routerLink]="''"></a>
         <ul class="nav-list">
           <li *ngFor="let route of navigation"
-              class="list-item item-{{route.path}}">
+              class="list-item item-{{route.path}}"
+              [class.is-active]="activeRoute === route.path">
             <a class="nav-list-menu" [routerLink]="route.path">
               <span class="nav-title">{{route.data?.titleJp}}</span>
             </a>
