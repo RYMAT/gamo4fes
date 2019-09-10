@@ -1,0 +1,31 @@
+@import "../../../styles/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 80px;
+  padding: 8px;
+  background-color: $footer-color;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  .navigation {
+    .sns-link {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      & + .sns-link {
+        margin-left: 16px;
+      }
+    }
+  }
+  .copy {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    letter-spacing: .05em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
