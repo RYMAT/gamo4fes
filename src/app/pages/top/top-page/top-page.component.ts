@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JsonConvertService } from '../../../core/json-convert/json-convert.service';
+import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
