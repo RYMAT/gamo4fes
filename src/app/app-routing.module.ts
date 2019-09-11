@@ -3,38 +3,36 @@ import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteConstant } from './core/constants';
 
-const { TOP, LIVE, FOOD, EVENT, ACCESS, GOODS } = RouteConstant;
-
 const routes: Routes = [
   {
-    path: TOP.path,
+    path: RouteConstant.TOP.path,
     loadChildren: () => import('./pages/top/top-page.module').then(m => m.TopPageModule),
-    data: TOP.data,
+    data: RouteConstant.TOP.data,
   },
   {
-    path: LIVE.path,
+    path: RouteConstant.LIVE.path,
     loadChildren: () => import('./pages/live/live-page.module').then(m => m.LivePageModule),
-    data: LIVE.data,
+    data: RouteConstant.LIVE.data,
   },
   {
-    path: FOOD.path,
+    path: RouteConstant.FOOD.path,
     loadChildren: () => import('./pages/food/food-page.module').then(m => m.FoodPageModule),
-    data: FOOD.data,
+    data: RouteConstant.FOOD.data,
   },
   {
-    path: EVENT.path,
+    path: RouteConstant.EVENT.path,
     loadChildren: () => import('./pages/event/event-page.module').then(m => m.EventPageModule),
-    data: EVENT.data,
+    data: RouteConstant.EVENT.data,
   },
   {
-    path: ACCESS.path,
+    path: RouteConstant.ACCESS.path,
     loadChildren: () => import('./pages/access/access-page.module').then(m => m.AccessPageModule),
-    data: ACCESS.data,
+    data: RouteConstant.ACCESS.data,
   },
   {
-    path: GOODS.path,
+    path: RouteConstant.GOODS.path,
     loadChildren: () => import('./pages/goods/goods-page.module').then(m => m.GoodsPageModule),
-    data: GOODS.data,
+    data: RouteConstant.GOODS.data,
   }
 ];
 
