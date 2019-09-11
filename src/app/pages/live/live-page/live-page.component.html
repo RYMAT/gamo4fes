@@ -1,1 +1,28 @@
-<p>live-page works!</p>
+<div class="detail-page-content">
+  <div class="main-image">
+    <div class="title-text">Live</div>
+  </div>
+  <section class="main-content">
+    <h2 class="heading-text">出演アーティストラインナップ</h2>
+    <div class="inner-content container">
+      <!--タイムテーブル-->
+      <div class="time-table-content">
+        <a class="image-wrapper" (click)="onShowTimeTablePdf()">
+          <img class="time-table-image" draggable="false" src="assets/images/time-table.jpg" alt="タイムテーブル">
+        </a>
+      </div>
+
+      <!--アーティスト-->
+      <div class="artist-content">
+        <ng-container *ngFor="let artist of artists">
+          <article class="artist">
+            <div class="artist-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
+            <span class="artist-name">{{artist.name}}</span>
+          </article>
+        </ng-container>
+      </div>
+    </div>
+
+
+  </section>
+</div>

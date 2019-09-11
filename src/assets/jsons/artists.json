@@ -8,8 +8,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_1.png",
-    "image_path_small": "assets/images/artists/artist_1_s.png",
+    "image_path": "assets/images/artists/artist_1.jpg",
+    "image_path_small": "assets/images/artists/artist_1_s.jpg",
     "profile_text": null,
     "stage_ids": [
       6
@@ -34,8 +34,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_2.png",
-    "image_path_small": "assets/images/artists/artist_2_s.png",
+    "image_path": "assets/images/artists/artist_2.jpg",
+    "image_path_small": "assets/images/artists/artist_2_s.jpg",
     "profile_text": null,
     "stage_ids": [
       9
@@ -60,8 +60,8 @@
     "twitter_url": "https://twitter.com/May_accordion",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_3.png",
-    "image_path_small": "assets/images/artists/artist_3_s.png",
+    "image_path": "assets/images/artists/artist_3.jpg",
+    "image_path_small": "assets/images/artists/artist_3_s.jpg",
     "profile_text": "トロンボーン・バストロンボーン・アコーディオンの変わった楽器の組み合わせのトリオです。高槻ジャスストリートや横手音フェスティバル公募制音楽イベントを中心に演奏をしています。去年のがもよんフェスが楽しかったので、また出られることが嬉しいです。トロンボーンが主役の曲から「こんな曲できるよ！」という曲まで、幅広く楽しんでいただけるアコーディボーンズを宜しくお願いいたします！",
     "stage_ids": [
       12
@@ -86,8 +86,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_4.png",
-    "image_path_small": "assets/images/artists/artist_4_s.png",
+    "image_path": "assets/images/artists/artist_4.jpg",
+    "image_path_small": "assets/images/artists/artist_4_s.jpg",
     "profile_text": "山形県出身・シンガーソングライター。都内を中心に活動中。YTS山形テレビ深夜版「Do～んな天気」２０１８/５月度タイアップ【会いに行かないと】全国発売中",
     "stage_ids": [
       4,
@@ -117,8 +117,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_5.png",
-    "image_path_small": "assets/images/artists/artist_5_s.png",
+    "image_path": "assets/images/artists/artist_5.jpg",
+    "image_path_small": "assets/images/artists/artist_5_s.jpg",
     "profile_text": "大阪出身。ギター弾き語りシンガーソングライター。音楽大学でクラシックを学び、友達の誘いで出演したYAMAHAのmusic revolusionで審査員特別賞を受賞。その後作詞作曲をはじめる。現在オリジナル曲は１０００曲以上。カラオケまねきねこ主催オーディション「すきドルプロジェクト５」準グランプリ。",
     "stage_ids": [
       4
@@ -143,8 +143,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_6.png",
-    "image_path_small": "assets/images/artists/artist_6_s.png",
+    "image_path": "assets/images/artists/artist_6.jpg",
+    "image_path_small": "assets/images/artists/artist_6_s.jpg",
     "profile_text": "児島佐織（theremin,syunth.)と菊池誠（Gt.,theremin）によるインストルメンタル・ロック・デュオ。テルミン奏者ふたりのバンドはたぶん世界でも珍しい。テルミンをメインにサイケデリック、プログレッシブ・ロック的な音を展開した２０１３年発売の１stアルバム”Unidentified Mystic Aether\"（完売）を近日リマスターを施し再発売の予定。",
     "stage_ids": [
       10
@@ -169,8 +169,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_7.png",
-    "image_path_small": "assets/images/artists/artist_7_s.png",
+    "image_path": "assets/images/artists/artist_7.jpg",
+    "image_path_small": "assets/images/artists/artist_7_s.jpg",
     "profile_text": "高知県土佐市出身、大阪在住。２００６年にMANASLAYPNILEでCharプロデュース、UNIVERSAL Jよりメジャーデビュー。年間１５０本程のライブがライフワークであり、他にもCMソングなどの楽曲提供、編曲、デザインなどマルチな才能を持つ。天性のグッドメロディと伸びやかな優しい声、人の心を掬い上げるような歌を歌うシンガーソングライター。",
     "stage_ids": [
       1,
@@ -200,8 +200,8 @@
     "twitter_url": "https://twitter.com/sae_pagne",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_8.png",
-    "image_path_small": "assets/images/artists/artist_8_s.png",
+    "image_path": "assets/images/artists/artist_8.jpg",
+    "image_path_small": "assets/images/artists/artist_8_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8
@@ -226,8 +226,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_9.png",
-    "image_path_small": "assets/images/artists/artist_9_s.png",
+    "image_path": "assets/images/artists/artist_9.jpg",
+    "image_path_small": "assets/images/artists/artist_9_s.jpg",
     "profile_text": null,
     "stage_ids": [
       5
@@ -252,8 +252,8 @@
     "twitter_url": "https://twitter.com/sswyukky",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_10.png",
-    "image_path_small": "assets/images/artists/artist_10_s.png",
+    "image_path": "assets/images/artists/artist_10.jpg",
+    "image_path_small": "assets/images/artists/artist_10_s.jpg",
     "profile_text": "大阪で活動している小学六年生シンガーソングライターです。ギターの弾き語りをしています。この夏に初めてのオリジナル曲を作詞作曲しました。いましか聴けない小学生が等身大で描く曲、聴いてみませんか？",
     "stage_ids": [
       10
@@ -278,8 +278,8 @@
     "twitter_url": "https://twitter.com/mamiii8",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_11.png",
-    "image_path_small": "assets/images/artists/artist_11_s.png",
+    "image_path": "assets/images/artists/artist_11.jpg",
+    "image_path_small": "assets/images/artists/artist_11_s.jpg",
     "profile_text": null,
     "stage_ids": [
       1
@@ -304,8 +304,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_12.png",
-    "image_path_small": "assets/images/artists/artist_12_s.png",
+    "image_path": "assets/images/artists/artist_12.jpg",
+    "image_path_small": "assets/images/artists/artist_12_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4,
@@ -335,8 +335,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_13.png",
-    "image_path_small": "assets/images/artists/artist_13_s.png",
+    "image_path": "assets/images/artists/artist_13.jpg",
+    "image_path_small": "assets/images/artists/artist_13_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8
@@ -361,8 +361,8 @@
     "twitter_url": "https://twitter.com/wataame61/",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_14.png",
-    "image_path_small": "assets/images/artists/artist_14_s.png",
+    "image_path": "assets/images/artists/artist_14.jpg",
+    "image_path_small": "assets/images/artists/artist_14_s.jpg",
     "profile_text": "シンガーソングライターであり、役者である、エンターテイナー宇佐美みお。１１/７あべのROCKTOWNにてワンマンエンターテインメントショー開催決定！「しあわせになりたい人、ここにおいで。」",
     "stage_ids": [
       6
@@ -387,8 +387,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_15.png",
-    "image_path_small": "assets/images/artists/artist_15_s.png",
+    "image_path": "assets/images/artists/artist_15.jpg",
+    "image_path_small": "assets/images/artists/artist_15_s.jpg",
     "profile_text": null,
     "stage_ids": [
       5,
@@ -418,8 +418,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_16.png",
-    "image_path_small": "assets/images/artists/artist_16_s.png",
+    "image_path": "assets/images/artists/artist_16.jpg",
+    "image_path_small": "assets/images/artists/artist_16_s.jpg",
     "profile_text": "関西を中心に様々な空間で、モジュラーシンセサイザーによるライブパフォーマンスを披露。五線譜の時間軸から飛び出したサウンドは、聴く人を不思議な電子音の世界へ誘っている。大志賀淳監督による日本初のシンセサイザードキュメンタリー映画「ナニワのシンセ界」、宇川直宏主宰「DOMMUNE/KANDA INDUSTRIAL」等に出演。電子音楽人を招いてのライブ＆トーク「電音ハッカーズ」主宰。",
     "stage_ids": [
       3
@@ -444,8 +444,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_17.png",
-    "image_path_small": "assets/images/artists/artist_17_s.png",
+    "image_path": "assets/images/artists/artist_17.jpg",
+    "image_path_small": "assets/images/artists/artist_17_s.jpg",
     "profile_text": null,
     "stage_ids": [
       9
@@ -470,8 +470,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_18.png",
-    "image_path_small": "assets/images/artists/artist_18_s.png",
+    "image_path": "assets/images/artists/artist_18.jpg",
+    "image_path_small": "assets/images/artists/artist_18_s.jpg",
     "profile_text": "ストリートライブで100人以上の集客を可能にし培ったエンターテイナー能力でn ライブハウスを中心にその場にいる全ての人を絶対的に笑顔にさせるような存在感で歌い続けるSSW。n 「NHKのど自慢」チャンピオン賞を獲得し、サタデーホットリクエストウルフルズスペシャルにてオープニングアクトを務めるn 抜群の歌唱力と心地良くも鋭いリズムを刻むギターに加え変幻自在のn ライブパフォーマンスはその場にいる人の心を掴んで離さない。",
     "stage_ids": [
       1,
@@ -501,8 +501,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_19.png",
-    "image_path_small": "assets/images/artists/artist_19_s.png",
+    "image_path": "assets/images/artists/artist_19.jpg",
+    "image_path_small": "assets/images/artists/artist_19_s.jpg",
     "profile_text": "ひょうたんを種から育て、その実から楽器というよりは音の出るものを自作し、演奏する一人ユニット。ひょうたん音のエレキ化および自動演奏化により、なんとかして植物で電子音楽を奏でようとする無謀な試みです。n (90年代伝説のフリーペーパー「花形文化通信」の今年復活したウェブサイトにて「ひょうたん日記」連載。種から音楽が生まれるまでを紹介しています。)",
     "stage_ids": [
       3
@@ -527,8 +527,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_20.png",
-    "image_path_small": "assets/images/artists/artist_20_s.png",
+    "image_path": "assets/images/artists/artist_20.jpg",
+    "image_path_small": "assets/images/artists/artist_20_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -553,8 +553,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_21.png",
-    "image_path_small": "assets/images/artists/artist_21_s.png",
+    "image_path": "assets/images/artists/artist_21.jpg",
+    "image_path_small": "assets/images/artists/artist_21_s.jpg",
     "profile_text": "元セブンデイズブッカー、現AZYTATE店主よっくん率いるロックバンド。日々感じることの中や、日々の暮らしから生み出される旋律と言葉をもとに、自分自身の視点のみならず、あらゆる角度から「生きる」ということを唄う。",
     "stage_ids": [
       2,
@@ -584,8 +584,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_22.png",
-    "image_path_small": "assets/images/artists/artist_22_s.png",
+    "image_path": "assets/images/artists/artist_22.jpg",
+    "image_path_small": "assets/images/artists/artist_22_s.jpg",
     "profile_text": "ウクレレ弾き語り。２０１６年よりソロ活動開始。心斎橋FootRock&BEERSにて定期的に自主企画「Ska vi fika?」を開催。昨年からは地元である奈良県吉野で主催の「七夕フェス」を開催。また出張喫茶Kafé Berså（珈琲屋）もおこなう。",
     "stage_ids": [
       5
@@ -610,8 +610,8 @@
     "twitter_url": "https://twitter.com/kenkecha",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_23.png",
-    "image_path_small": "assets/images/artists/artist_23_s.png",
+    "image_path": "assets/images/artists/artist_23.jpg",
+    "image_path_small": "assets/images/artists/artist_23_s.jpg",
     "profile_text": null,
     "stage_ids": [
       6
@@ -636,8 +636,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_24.png",
-    "image_path_small": "assets/images/artists/artist_24_s.png",
+    "image_path": "assets/images/artists/artist_24.jpg",
+    "image_path_small": "assets/images/artists/artist_24_s.jpg",
     "profile_text": "ピアノ弾き語りの形式を中心に活動するシンガーソングライター。心に染み渡るような、尚且力強い歌声を持ち味とし、大阪・関東・名古屋など、幅広く活動している。私の歌で、疲れた心を癒しに来ませんか？",
     "stage_ids": [
       8
@@ -662,8 +662,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_25.png",
-    "image_path_small": "assets/images/artists/artist_25_s.png",
+    "image_path": "assets/images/artists/artist_25.jpg",
+    "image_path_small": "assets/images/artists/artist_25_s.jpg",
     "profile_text": null,
     "stage_ids": [
       10,
@@ -693,8 +693,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_26.png",
-    "image_path_small": "assets/images/artists/artist_26_s.png",
+    "image_path": "assets/images/artists/artist_26.jpg",
+    "image_path_small": "assets/images/artists/artist_26_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -719,8 +719,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_27.png",
-    "image_path_small": "assets/images/artists/artist_27_s.png",
+    "image_path": "assets/images/artists/artist_27.jpg",
+    "image_path_small": "assets/images/artists/artist_27_s.jpg",
     "profile_text": null,
     "stage_ids": [
       10
@@ -745,8 +745,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_28.png",
-    "image_path_small": "assets/images/artists/artist_28_s.png",
+    "image_path": "assets/images/artists/artist_28.jpg",
+    "image_path_small": "assets/images/artists/artist_28_s.jpg",
     "profile_text": "『生きる』をテーマに掲げ音楽活動を展開するAcoustic魂Rocker。n n ◆PSPゲームソフト『雅恋-MIYAKO-』主題歌n ◆千葉TVドラマ『SECRET★PLAN』主題歌n n HPhttps://kishidatoshiki.wixsite.com/soulbeatlifetimen Twitterhttp://twitter.com/kishi_toshin n ◆毎月第2・第4木曜日21:00から配信アプリShowroomにてHopBankとの音楽ユニット「コロッケ家族」定期配信中。n n https://www.showroom-live.com/894cc2168065n n ◆ラジオ『音無しくなれないふたり』パーソナリティn http://www.tokyonetradio.com/ch/otnsknrniftr.html",
     "stage_ids": [
       9,
@@ -776,8 +776,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_29.png",
-    "image_path_small": "assets/images/artists/artist_29_s.png",
+    "image_path": "assets/images/artists/artist_29.jpg",
+    "image_path_small": "assets/images/artists/artist_29_s.jpg",
     "profile_text": null,
     "stage_ids": [
       6
@@ -802,8 +802,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_30.png",
-    "image_path_small": "assets/images/artists/artist_30_s.png",
+    "image_path": "assets/images/artists/artist_30.jpg",
+    "image_path_small": "assets/images/artists/artist_30_s.jpg",
     "profile_text": null,
     "stage_ids": [
       12
@@ -828,8 +828,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_31.png",
-    "image_path_small": "assets/images/artists/artist_31_s.png",
+    "image_path": "assets/images/artists/artist_31.jpg",
+    "image_path_small": "assets/images/artists/artist_31_s.jpg",
     "profile_text": "げんよう 兵庫県出身。1993年7月25日生まれn 関西と東京を中心に活動するピアノ弾き語りシンガーソングライター。n 飾らない言葉で心のありのままを歌い、年間100本近いライブを行なっている。",
     "stage_ids": [
       8
@@ -854,8 +854,8 @@
     "twitter_url": "https://twitter.com/COKERA_SN",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_32.png",
-    "image_path_small": "assets/images/artists/artist_32_s.png",
+    "image_path": "assets/images/artists/artist_32.jpg",
+    "image_path_small": "assets/images/artists/artist_32_s.jpg",
     "profile_text": null,
     "stage_ids": [
       7
@@ -880,8 +880,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_33.png",
-    "image_path_small": "assets/images/artists/artist_33_s.png",
+    "image_path": "assets/images/artists/artist_33.jpg",
+    "image_path_small": "assets/images/artists/artist_33_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -906,8 +906,8 @@
     "twitter_url": "https://twitter.com/mahiro_kohinata",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_34.png",
-    "image_path_small": "assets/images/artists/artist_34_s.png",
+    "image_path": "assets/images/artists/artist_34.jpg",
+    "image_path_small": "assets/images/artists/artist_34_s.jpg",
     "profile_text": "鳥を愛し鳥に愛される系シンガーソングライター小日向まひろです。オカーメインコは可愛いね♪YES!!",
     "stage_ids": [
       6
@@ -932,8 +932,8 @@
     "twitter_url": "https://twitter.com/sakuya_ssw",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_35.png",
-    "image_path_small": "assets/images/artists/artist_35_s.png",
+    "image_path": "assets/images/artists/artist_35.jpg",
+    "image_path_small": "assets/images/artists/artist_35_s.jpg",
     "profile_text": null,
     "stage_ids": [
       7
@@ -958,8 +958,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_36.png",
-    "image_path_small": "assets/images/artists/artist_36_s.png",
+    "image_path": "assets/images/artists/artist_36.jpg",
+    "image_path_small": "assets/images/artists/artist_36_s.jpg",
     "profile_text": "メッセージが伝わる情景をコンセプトに絵を描くように曲を書く。また、ハスキーかつ伸びやかという相反する要素を持つ歌声は幅広い層から支持を得る。n ２０１６年、野外フェス「みんなのレシピ」＠上野恩賜水上野外音楽堂を主催。２０１７年、同イベント来場者数延べ３３６２人。２０１９年、同イベントを２days開催。来場者数延べ２７１６人に達し、大盛況のうちに幕を閉じる。",
     "stage_ids": [
       1,
@@ -989,8 +989,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_37.png",
-    "image_path_small": "assets/images/artists/artist_37_s.png",
+    "image_path": "assets/images/artists/artist_37.jpg",
+    "image_path_small": "assets/images/artists/artist_37_s.jpg",
     "profile_text": "弾き語りやバンド、JAZZシンガーとしてマルチに活動しているボーカリスト。n JAZZ・ROCK・POPS等、あらゆるジャンルに影響を受け作られた楽曲は必聴。n 2020年3月13日に心斎橋JANUSで行われる、自身3度目となるワンマンライブに向け、動員300人を目指し精力的に活動中。n 会うごとに進化を遂げるステージングに注目。",
     "stage_ids": [
       9,
@@ -1020,8 +1020,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_38.png",
-    "image_path_small": "assets/images/artists/artist_38_s.png",
+    "image_path": "assets/images/artists/artist_38.jpg",
+    "image_path_small": "assets/images/artists/artist_38_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -1046,8 +1046,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": "https://www.facebook.com/Sig",
-    "image_path": "assets/images/artists/artist_39.png",
-    "image_path_small": "assets/images/artists/artist_39_s.png",
+    "image_path": "assets/images/artists/artist_39.jpg",
+    "image_path_small": "assets/images/artists/artist_39_s.jpg",
     "profile_text": "おしゃべり担当のSIGと、居眠り担当のかみんによるオリジナル沖縄風ポップス＆moreな、のんびりふんわりユニット♫口癖は「OH YEAH！」、合言葉は「皆様の明日に笑顔がありますように！」",
     "stage_ids": [
       12
@@ -1072,8 +1072,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_40.png",
-    "image_path_small": "assets/images/artists/artist_40_s.png",
+    "image_path": "assets/images/artists/artist_40.jpg",
+    "image_path_small": "assets/images/artists/artist_40_s.jpg",
     "profile_text": "大阪出身、在住の今年で活動５周年を迎えるシンガーソングライター。温かく、そして熱く紡ぐ言葉を柔らかな歌声・表情に乗せ、背中を押し自然に元気にさせてくれる。今年の11/21(木）心斎橋Music Club JANUSにて、初のフルアルバム「縁ーyukari」のリリースを記念としたワンマンライブの開催が決定。",
     "stage_ids": [
       1,
@@ -1103,8 +1103,8 @@
     "twitter_url": "https://twitter.com/kuraponz",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_41.png",
-    "image_path_small": "assets/images/artists/artist_41_s.png",
+    "image_path": "assets/images/artists/artist_41.jpg",
+    "image_path_small": "assets/images/artists/artist_41_s.jpg",
     "profile_text": null,
     "stage_ids": [
       10
@@ -1129,8 +1129,8 @@
     "twitter_url": "https://twitter.com/wscomet",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_42.png",
-    "image_path_small": "assets/images/artists/artist_42_s.png",
+    "image_path": "assets/images/artists/artist_42.jpg",
+    "image_path_small": "assets/images/artists/artist_42_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -1155,8 +1155,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_43.png",
-    "image_path_small": "assets/images/artists/artist_43_s.png",
+    "image_path": "assets/images/artists/artist_43.jpg",
+    "image_path_small": "assets/images/artists/artist_43_s.jpg",
     "profile_text": null,
     "stage_ids": [
       12
@@ -1181,8 +1181,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_44.png",
-    "image_path_small": "assets/images/artists/artist_44_s.png",
+    "image_path": "assets/images/artists/artist_44.jpg",
+    "image_path_small": "assets/images/artists/artist_44_s.jpg",
     "profile_text": null,
     "stage_ids": [
       1
@@ -1207,8 +1207,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_45.png",
-    "image_path_small": "assets/images/artists/artist_45_s.png",
+    "image_path": "assets/images/artists/artist_45.jpg",
+    "image_path_small": "assets/images/artists/artist_45_s.jpg",
     "profile_text": "シンガーソングライター。愛をこめて。",
     "stage_ids": [
       8
@@ -1233,8 +1233,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_46.png",
-    "image_path_small": "assets/images/artists/artist_46_s.png",
+    "image_path": "assets/images/artists/artist_46.jpg",
+    "image_path_small": "assets/images/artists/artist_46_s.jpg",
     "profile_text": null,
     "stage_ids": [
       5,
@@ -1264,8 +1264,8 @@
     "twitter_url": "https://twitter.com/egaowasuteki",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_47.png",
-    "image_path_small": "assets/images/artists/artist_47_s.png",
+    "image_path": "assets/images/artists/artist_47.jpg",
+    "image_path_small": "assets/images/artists/artist_47_s.jpg",
     "profile_text": null,
     "stage_ids": [
       9
@@ -1290,8 +1290,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_48.png",
-    "image_path_small": "assets/images/artists/artist_48_s.png",
+    "image_path": "assets/images/artists/artist_48.jpg",
+    "image_path_small": "assets/images/artists/artist_48_s.jpg",
     "profile_text": "右手にファンク、左手にソウル！そして、胸にはミュージックへのリスペクトを！関西発！ニコニコハッピーバンド！ディスコ戦隊踊るんじゃっ！みんなが踊らないと音楽の火が消える？！その火が消えてしまうと９０年間人類を楽しませてきたサウンドは東京オリンピックを目前にあえなく枯れ果ててしまう！\n \"さあ、身体を揺らせ！身体踊れば心も踊るのさ！”",
     "stage_ids": [
       2
@@ -1316,8 +1316,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_49.png",
-    "image_path_small": "assets/images/artists/artist_49_s.png",
+    "image_path": "assets/images/artists/artist_49.jpg",
+    "image_path_small": "assets/images/artists/artist_49_s.jpg",
     "profile_text": "島根県浜田市出身。水瓶座のO型/鍵盤弾き語り。心の端を抓るような感覚も嘘に隠れた小さな本音も、全部抱きしめていたい。誰かの”言葉”になる歌をぽつぽつ紡ぎながら、関西を中心に活動中。",
     "stage_ids": [
       8
@@ -1342,8 +1342,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_50.png",
-    "image_path_small": "assets/images/artists/artist_50_s.png",
+    "image_path": "assets/images/artists/artist_50.jpg",
+    "image_path_small": "assets/images/artists/artist_50_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -1368,8 +1368,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_51.png",
-    "image_path_small": "assets/images/artists/artist_51_s.png",
+    "image_path": "assets/images/artists/artist_51.jpg",
+    "image_path_small": "assets/images/artists/artist_51_s.jpg",
     "profile_text": "空中投歌でVOCAL/BASSやってます。当日はアコギとカホンでロックすることにしました。会場は初めての鐘の音。宜しくお願います！",
     "stage_ids": [
       4
@@ -1394,8 +1394,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_52.png",
-    "image_path_small": "assets/images/artists/artist_52_s.png",
+    "image_path": "assets/images/artists/artist_52.jpg",
+    "image_path_small": "assets/images/artists/artist_52_s.jpg",
     "profile_text": null,
     "stage_ids": [
       6
@@ -1420,8 +1420,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_53.png",
-    "image_path_small": "assets/images/artists/artist_53_s.png",
+    "image_path": "assets/images/artists/artist_53.jpg",
+    "image_path_small": "assets/images/artists/artist_53_s.jpg",
     "profile_text": null,
     "stage_ids": [
       12
@@ -1446,8 +1446,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_54.png",
-    "image_path_small": "assets/images/artists/artist_54_s.png",
+    "image_path": "assets/images/artists/artist_54.jpg",
+    "image_path_small": "assets/images/artists/artist_54_s.jpg",
     "profile_text": "神戸出身・大阪在住。関西を中心に名古屋・関東・北陸でも活動する鍵盤弾き語りセロトニン系シンガーソングライター。２０１１年、ライブスタート。２０１９年８月に９作目となるCD「夏のレクイエム/Oh baby(Ocean Breeze Mix）」をリリース。静動混在完全燃焼のライブパフォーマンスは必見の価値あり。",
     "stage_ids": [
       1
@@ -1472,8 +1472,8 @@
     "twitter_url": "https://twitter.com/yuchayuchax",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_55.png",
-    "image_path_small": "assets/images/artists/artist_55_s.png",
+    "image_path": "assets/images/artists/artist_55.jpg",
+    "image_path_small": "assets/images/artists/artist_55_s.jpg",
     "profile_text": null,
     "stage_ids": [
       10
@@ -1498,8 +1498,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_56.png",
-    "image_path_small": "assets/images/artists/artist_56_s.png",
+    "image_path": "assets/images/artists/artist_56.jpg",
+    "image_path_small": "assets/images/artists/artist_56_s.jpg",
     "profile_text": null,
     "stage_ids": [
       9
@@ -1524,8 +1524,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_57.png",
-    "image_path_small": "assets/images/artists/artist_57_s.png",
+    "image_path": "assets/images/artists/artist_57.jpg",
+    "image_path_small": "assets/images/artists/artist_57_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -1550,8 +1550,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_58.png",
-    "image_path_small": "assets/images/artists/artist_58_s.png",
+    "image_path": "assets/images/artists/artist_58.jpg",
+    "image_path_small": "assets/images/artists/artist_58_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -1576,8 +1576,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_59.png",
-    "image_path_small": "assets/images/artists/artist_59_s.png",
+    "image_path": "assets/images/artists/artist_59.jpg",
+    "image_path_small": "assets/images/artists/artist_59_s.jpg",
     "profile_text": "カントリー＆ウェスタンに影響を受けたアコースティック楽団！肉と肉が絶妙な黄金比でぶつかり合う様は見応えたっぷり！おかわり自由のMCに、熱々鉄板の楽曲たちにと神戸の名物を世界にお届け！n ”何を食べるかじゃない！誰と食べるかだー！”",
     "stage_ids": [
       1
@@ -1602,8 +1602,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_60.png",
-    "image_path_small": "assets/images/artists/artist_60_s.png",
+    "image_path": "assets/images/artists/artist_60.jpg",
+    "image_path_small": "assets/images/artists/artist_60_s.jpg",
     "profile_text": null,
     "stage_ids": [
       9,
@@ -1633,8 +1633,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_61.png",
-    "image_path_small": "assets/images/artists/artist_61_s.png",
+    "image_path": "assets/images/artists/artist_61.jpg",
+    "image_path_small": "assets/images/artists/artist_61_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2,
@@ -1664,8 +1664,8 @@
     "twitter_url": "https://twitter.com/ancoromochi3",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_62.png",
-    "image_path_small": "assets/images/artists/artist_62_s.png",
+    "image_path": "assets/images/artists/artist_62.jpg",
+    "image_path_small": "assets/images/artists/artist_62_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8,
@@ -1695,8 +1695,8 @@
     "twitter_url": "https://twitter.com/Fm1Yukey?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaythor",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_63.png",
-    "image_path_small": "assets/images/artists/artist_63_s.png",
+    "image_path": "assets/images/artists/artist_63.jpg",
+    "image_path_small": "assets/images/artists/artist_63_s.jpg",
     "profile_text": "日常の些細な疑問や心に引っかかった出来事を拾い、普段は言葉にせず諦めたり折り合いをつけている目に見えないものを愛と皮肉を込めて曲にする。あなたが主人公の物語。の挿入歌を届けます。",
     "stage_ids": [
       8
@@ -1721,8 +1721,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_64.png",
-    "image_path_small": "assets/images/artists/artist_64_s.png",
+    "image_path": "assets/images/artists/artist_64.jpg",
+    "image_path_small": "assets/images/artists/artist_64_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2,
@@ -1752,8 +1752,8 @@
     "twitter_url": null,
     "instagram_url": "https://www.instagram.com/20__sara__00/",
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_65.png",
-    "image_path_small": "assets/images/artists/artist_65_s.png",
+    "image_path": "assets/images/artists/artist_65.jpg",
+    "image_path_small": "assets/images/artists/artist_65_s.jpg",
     "profile_text": "２０００年生まれ。幼稚園時に”人に勇気や元気を与えられる歌手になりたい”と思い、２００６年～２０１２年までジュネスに所属。舞台、スチール、CMなどに出演。２０１７年、Instagramにて弾き語りカバー動画の投稿を開始。２０１９年、フォロワー数が５５００人を突破。現在の活動は音楽の枠に留まらず、サロンモデル、ラジオなど幅を広げている。",
     "stage_ids": [
       6,
@@ -1783,8 +1783,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_66.png",
-    "image_path_small": "assets/images/artists/artist_66_s.png",
+    "image_path": "assets/images/artists/artist_66.jpg",
+    "image_path_small": "assets/images/artists/artist_66_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8
@@ -1809,8 +1809,8 @@
     "twitter_url": "https://twitter.com/msok_rn",
     "instagram_url": "https://www.instagram.com/rn_msok/",
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_67.png",
-    "image_path_small": "assets/images/artists/artist_67_s.png",
+    "image_path": "assets/images/artists/artist_67.jpg",
+    "image_path_small": "assets/images/artists/artist_67_s.jpg",
     "profile_text": null,
     "stage_ids": [
       6,
@@ -1840,8 +1840,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_68.png",
-    "image_path_small": "assets/images/artists/artist_68_s.png",
+    "image_path": "assets/images/artists/artist_68.jpg",
+    "image_path_small": "assets/images/artists/artist_68_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8
@@ -1866,8 +1866,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_69.png",
-    "image_path_small": "assets/images/artists/artist_69_s.png",
+    "image_path": "assets/images/artists/artist_69.jpg",
+    "image_path_small": "assets/images/artists/artist_69_s.jpg",
     "profile_text": null,
     "stage_ids": [
       5,
@@ -1897,8 +1897,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_70.png",
-    "image_path_small": "assets/images/artists/artist_70_s.png",
+    "image_path": "assets/images/artists/artist_70.jpg",
+    "image_path_small": "assets/images/artists/artist_70_s.jpg",
     "profile_text": "神戸市在住シンガーソングライター。ゆるいギターとよそ行きの声で、聴く人をダマし（癒し）ています。誰かの心に入り込めたら飲んびりと居座ってしまおう、そうしよう。",
     "stage_ids": [
       6,
@@ -1928,8 +1928,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_71.png",
-    "image_path_small": "assets/images/artists/artist_71_s.png",
+    "image_path": "assets/images/artists/artist_71.jpg",
+    "image_path_small": "assets/images/artists/artist_71_s.jpg",
     "profile_text": "８７年、エキスポを結成、アルファレコードからデビュー。様々なアーティストのレコーディングにマニピュレーターとして参加。セガのゲームミュージックS.S.T.BANDを経て、玉繭物語、キリークザブラッド、ビートマニア、太鼓の達人などのゲーム音楽を制作。「おしりかじり虫」、アニメ「キルミーベイベー」、NHK[大科学実験」などの音楽を制作。シンセサイザーを使ったソロライブを行う。",
     "stage_ids": [
       3
@@ -1954,8 +1954,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_72.png",
-    "image_path_small": "assets/images/artists/artist_72_s.png",
+    "image_path": "assets/images/artists/artist_72.jpg",
+    "image_path_small": "assets/images/artists/artist_72_s.jpg",
     "profile_text": "大阪出身のシンガーソングライター。主にライブハウス、フリーイベントなどに出演。自主企画やワンマンライブなどを行なっている。２０１７年には路上LIVEで得た資金だけで４７都道府県を周りきるなど精力的に活動している。",
     "stage_ids": [
       9,
@@ -1985,8 +1985,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_73.png",
-    "image_path_small": "assets/images/artists/artist_73_s.png",
+    "image_path": "assets/images/artists/artist_73.jpg",
+    "image_path_small": "assets/images/artists/artist_73_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -2011,8 +2011,8 @@
     "twitter_url": "https://twitter.com/morimoto_cfy",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_74.png",
-    "image_path_small": "assets/images/artists/artist_74_s.png",
+    "image_path": "assets/images/artists/artist_74.jpg",
+    "image_path_small": "assets/images/artists/artist_74_s.jpg",
     "profile_text": "２０１８年より本格的にソロ活動開始。ポップス、ロック、ポエトリーラップ等の様々なジャンルを独自の解釈で表現する唯一無二のミュージシャン。",
     "stage_ids": [
       5
@@ -2037,8 +2037,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_75.png",
-    "image_path_small": "assets/images/artists/artist_75_s.png",
+    "image_path": "assets/images/artists/artist_75.jpg",
+    "image_path_small": "assets/images/artists/artist_75_s.jpg",
     "profile_text": null,
     "stage_ids": [
       12
@@ -2063,8 +2063,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_76.png",
-    "image_path_small": "assets/images/artists/artist_76_s.png",
+    "image_path": "assets/images/artists/artist_76.jpg",
+    "image_path_small": "assets/images/artists/artist_76_s.jpg",
     "profile_text": null,
     "stage_ids": [
       8
@@ -2089,8 +2089,8 @@
     "twitter_url": "https://twitter.com/search?f=tweets&q=%23",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_77.png",
-    "image_path_small": "assets/images/artists/artist_77_s.png",
+    "image_path": "assets/images/artists/artist_77.jpg",
+    "image_path_small": "assets/images/artists/artist_77_s.jpg",
     "profile_text": null,
     "stage_ids": [
       3
@@ -2115,8 +2115,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_78.png",
-    "image_path_small": "assets/images/artists/artist_78_s.png",
+    "image_path": "assets/images/artists/artist_78.jpg",
+    "image_path_small": "assets/images/artists/artist_78_s.jpg",
     "profile_text": "ゆっくり、優しく歌います。小休止したいなという方、ぜひ聴きに来てやってください。",
     "stage_ids": [
       10
@@ -2141,8 +2141,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_79.png",
-    "image_path_small": "assets/images/artists/artist_79_s.png",
+    "image_path": "assets/images/artists/artist_79.jpg",
+    "image_path_small": "assets/images/artists/artist_79_s.jpg",
     "profile_text": "大阪出身、関西を中心に活動するギター弾き語りシンガーソングライター。２００４年ソロ活動開始。２００６年TV「水野真紀の魔法のレストラン」（毎日放送）のエンディングテーマに「SNOW DRIVE」が起用。２０１９年８月に１０作目となるCD「夏のレクイエム/真夏の恋の物語」をリリース。数多くのアーティストの楽曲アレンジやレコーディングエンジニアとしても活躍中。",
     "stage_ids": [
       8
@@ -2167,8 +2167,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_80.png",
-    "image_path_small": "assets/images/artists/artist_80_s.png",
+    "image_path": "assets/images/artists/artist_80.jpg",
+    "image_path_small": "assets/images/artists/artist_80_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -2193,8 +2193,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_81.png",
-    "image_path_small": "assets/images/artists/artist_81_s.png",
+    "image_path": "assets/images/artists/artist_81.jpg",
+    "image_path_small": "assets/images/artists/artist_81_s.jpg",
     "profile_text": null,
     "stage_ids": [
       4
@@ -2219,8 +2219,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_82.png",
-    "image_path_small": "assets/images/artists/artist_82_s.png",
+    "image_path": "assets/images/artists/artist_82.jpg",
+    "image_path_small": "assets/images/artists/artist_82_s.jpg",
     "profile_text": "１９８９年１０月５日生まれ。大阪市平野区出身。就職活動中に１０年前の自分から届いた一通の手紙から、シンガーソングライターになることを決意。２０１９年１０月６日、生まれ育った平野区でのチャリティーワンマンコンサートは満員御礼大成功！吉川MANAの「人間パワー」をお届けします！",
     "stage_ids": [
       5,
@@ -2250,8 +2250,8 @@
     "twitter_url": "https://twitter.com/yoshidasenpaii",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_83.png",
-    "image_path_small": "assets/images/artists/artist_83_s.png",
+    "image_path": "assets/images/artists/artist_83.jpg",
+    "image_path_small": "assets/images/artists/artist_83_s.jpg",
     "profile_text": "蒲生四丁目で働き始めて16年のサラリーマンシンガー。過ぎ行く日々の中で湧き起こる感情を、日常の言葉で歌います。強かったり、くじけたり、愛したり、怒ったりを表現する、等身大の歌うたい。",
     "stage_ids": [
       10
@@ -2276,8 +2276,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_84.png",
-    "image_path_small": "assets/images/artists/artist_84_s.png",
+    "image_path": "assets/images/artists/artist_84.jpg",
+    "image_path_small": "assets/images/artists/artist_84_s.jpg",
     "profile_text": "お笑いと音楽の二刀流n ラニーノイズが繰り出す愉快、痛快、疾走感ある極上メロディに聴き惚れろ～n 是非ともライブを体感しに来てください！",
     "stage_ids": [
       2
@@ -2302,8 +2302,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_85.png",
-    "image_path_small": "assets/images/artists/artist_85_s.png",
+    "image_path": "assets/images/artists/artist_85.jpg",
+    "image_path_small": "assets/images/artists/artist_85_s.jpg",
     "profile_text": null,
     "stage_ids": [
       2
@@ -2328,8 +2328,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_86.png",
-    "image_path_small": "assets/images/artists/artist_86_s.png",
+    "image_path": "assets/images/artists/artist_86.jpg",
+    "image_path_small": "assets/images/artists/artist_86_s.jpg",
     "profile_text": null,
     "stage_ids": [
       10
@@ -2354,8 +2354,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_87.png",
-    "image_path_small": "assets/images/artists/artist_87_s.png",
+    "image_path": "assets/images/artists/artist_87.jpg",
+    "image_path_small": "assets/images/artists/artist_87_s.jpg",
     "profile_text": null,
     "stage_ids": [
       1,
@@ -2385,8 +2385,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_88.png",
-    "image_path_small": "assets/images/artists/artist_88_s.png",
+    "image_path": "assets/images/artists/artist_88.jpg",
+    "image_path_small": "assets/images/artists/artist_88_s.jpg",
     "profile_text": null,
     "stage_ids": [
       7,
@@ -2416,8 +2416,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_89.png",
-    "image_path_small": "assets/images/artists/artist_89_s.png",
+    "image_path": "assets/images/artists/artist_89.jpg",
+    "image_path_small": "assets/images/artists/artist_89_s.jpg",
     "profile_text": "プログレ好きの鍵盤奏者時々DJ。ごく稀にVJも。n 2chのオフ板発祥で今年16周年を迎えるオールジャンルクラブイベント『異臭騒ぎ』の現オーガナイザーであり、実は1989年のTM NetworkCAROLツアーにダンサーとして参加していた経歴を持つ自称「小室ファミリー」。",
     "stage_ids": [
       3
@@ -2442,8 +2442,8 @@
     "twitter_url": "https://twitter.com/akihitotan?s=09",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_90.png",
-    "image_path_small": "assets/images/artists/artist_90_s.png",
+    "image_path": "assets/images/artists/artist_90.jpg",
+    "image_path_small": "assets/images/artists/artist_90_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2468,8 +2468,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_91.png",
-    "image_path_small": "assets/images/artists/artist_91_s.png",
+    "image_path": "assets/images/artists/artist_91.jpg",
+    "image_path_small": "assets/images/artists/artist_91_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2494,8 +2494,8 @@
     "twitter_url": "https://twitter.com/ahiru_kazu",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_92.png",
-    "image_path_small": "assets/images/artists/artist_92_s.png",
+    "image_path": "assets/images/artists/artist_92.jpg",
+    "image_path_small": "assets/images/artists/artist_92_s.jpg",
     "profile_text": "元クラブ常連が選曲する、８０’９０’Disc&Clubミュージック、J-popEuroBeatなど聞き慣れた曲中心で、お送りしています。現在、SNS等で配信活動中。",
     "stage_ids": [
       11
@@ -2520,8 +2520,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_93.png",
-    "image_path_small": "assets/images/artists/artist_93_s.png",
+    "image_path": "assets/images/artists/artist_93.jpg",
+    "image_path_small": "assets/images/artists/artist_93_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2546,8 +2546,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_94.png",
-    "image_path_small": "assets/images/artists/artist_94_s.png",
+    "image_path": "assets/images/artists/artist_94.jpg",
+    "image_path_small": "assets/images/artists/artist_94_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2572,8 +2572,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_95.png",
-    "image_path_small": "assets/images/artists/artist_95_s.png",
+    "image_path": "assets/images/artists/artist_95.jpg",
+    "image_path_small": "assets/images/artists/artist_95_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2598,8 +2598,8 @@
     "twitter_url": "https://twitter.com/xanadujin",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_96.png",
-    "image_path_small": "assets/images/artists/artist_96_s.png",
+    "image_path": "assets/images/artists/artist_96.jpg",
+    "image_path_small": "assets/images/artists/artist_96_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2624,8 +2624,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_97.png",
-    "image_path_small": "assets/images/artists/artist_97_s.png",
+    "image_path": "assets/images/artists/artist_97.jpg",
+    "image_path_small": "assets/images/artists/artist_97_s.jpg",
     "profile_text": "合い言葉は『GAME IS FASHION!!』、大阪8bitシーンlive＆fashion集団【Command?】所属のtrack maker。n ゲーム好きがリミットブレイクし、ゲームサウンドや効果音、電子音で、私式Game Dance Musicを制作。n 頭には『スーパーファミコンのコントローラ』を装備して、ゲーム音楽で踊れる音楽を作りながら活動中。n 好きな言葉は『宇宙の法則が乱れる』。",
     "stage_ids": [
       3
@@ -2650,8 +2650,8 @@
     "twitter_url": "http://twitter.com/senmu69",
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_98.png",
-    "image_path_small": "assets/images/artists/artist_98_s.png",
+    "image_path": "assets/images/artists/artist_98.jpg",
+    "image_path_small": "assets/images/artists/artist_98_s.jpg",
     "profile_text": "神戸生まれ神戸育ち神戸在住。一児の父。神戸大阪を中心にライブハウスや音楽BAR等でDJ活動中。ロックバンド系DJ、ゲームミュージックDJ、時々面白DJ。基本ライブハウスで飲んで遊んでる人。音楽のある楽しい空間がとにかく大好き。他にゲーム・野球・競馬・大相撲・車も好き。大の鉄道ファン（乗り鉄）。古くからの音楽仲間達が今盛り上げる街がもよんに神戸からグッドミュージック持っていきます！よろしくお願いします！",
     "stage_ids": [
       11
@@ -2676,8 +2676,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_99.png",
-    "image_path_small": "assets/images/artists/artist_99_s.png",
+    "image_path": "assets/images/artists/artist_99.jpg",
+    "image_path_small": "assets/images/artists/artist_99_s.jpg",
     "profile_text": "和dining DANDANを始めて今年で節目の１０年！中１の時にYMOのテクノポップスの洗礼を受けて以来、斜め上の人生を歩んできたおんとし巳年５４歳。まだまだ頑張っていきますよー！Unyoさんはじめテクノ系の皆様のお助けに感謝しております！",
     "stage_ids": [
       3,
@@ -2707,8 +2707,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_100.png",
-    "image_path_small": "assets/images/artists/artist_100_s.png",
+    "image_path": "assets/images/artists/artist_100.jpg",
+    "image_path_small": "assets/images/artists/artist_100_s.jpg",
     "profile_text": "CMでたまたま流れていたPerfumeのポリリズムに興味を引かれ、ネットで動画を見ているうちにそれまで特に興味もなかった”テクノポップ”にはまり、クラブミュージックに興味を持つ。色んな廻り合わせやタイミングでDJを始め、「みんなで楽しもう！」をモットーに色々な活動を始める。DJとは別に「GlitterGirlsAssort」などのアイドルイベントやライブイベントも主催して人気を博している。",
     "stage_ids": [
       3
@@ -2733,8 +2733,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_101.png",
-    "image_path_small": "assets/images/artists/artist_101_s.png",
+    "image_path": "assets/images/artists/artist_101.jpg",
+    "image_path_small": "assets/images/artists/artist_101_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2759,8 +2759,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_102.png",
-    "image_path_small": "assets/images/artists/artist_102_s.png",
+    "image_path": "assets/images/artists/artist_102.jpg",
+    "image_path_small": "assets/images/artists/artist_102_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2785,8 +2785,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_103.png",
-    "image_path_small": "assets/images/artists/artist_103_s.png",
+    "image_path": "assets/images/artists/artist_103.jpg",
+    "image_path_small": "assets/images/artists/artist_103_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
@@ -2811,8 +2811,8 @@
     "twitter_url": null,
     "instagram_url": null,
     "facebook_url": null,
-    "image_path": "assets/images/artists/artist_104.png",
-    "image_path_small": "assets/images/artists/artist_104_s.png",
+    "image_path": "assets/images/artists/artist_104.jpg",
+    "image_path_small": "assets/images/artists/artist_104_s.jpg",
     "profile_text": null,
     "stage_ids": [
       11
