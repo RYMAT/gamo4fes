@@ -1,0 +1,79 @@
+@import "../../../../styles/modules";
+
+@include detailPageLayout;
+@include modalBase;
+
+.main-image {
+  background-image: url("/assets/images/pages/food-top.jpg");
+}
+
+.main-content {
+  .heading-text {
+    background-color: #EE6352;
+    background: linear-gradient(20deg, #EE6352, #FF4141);
+  }
+}
+
+
+.card-content {
+  .food {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    cursor: pointer;
+    &.empty {
+      background-color: transparent;
+      box-shadow: none;
+      visibility: hidden;
+    }
+    // overlay
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 8px;
+      pointer-events: none;
+      background-color: #fff;
+    }
+    .food-image {
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease 0s;
+      will-change: transform;
+      transform: scale(1);
+    }
+    &:hover .food-image {
+      transform: scale(1.2);
+    }
+    .food-name {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      color: #fff;
+      font-size: 12.5px;
+      text-align: left;
+      background-color: rgba(#EE6352, 0.8);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      letter-spacing: .05em;
+    }
+  }
+}

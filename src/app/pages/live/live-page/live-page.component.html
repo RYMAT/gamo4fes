@@ -13,7 +13,7 @@
       </div>
 
       <!--アーティスト-->
-      <div class="artist-content">
+      <div class="card-content">
         <ng-container *ngFor="let artist of artists">
           <article class="artist" (click)="onShowArtistModal(artist)">
             <div class="artist-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
@@ -36,7 +36,7 @@
                 ></figure>
               </div>
               <div class="right-content">
-                <div class="artist-name">
+                <div class="name-content">
                   <!--アーティスト名-->
                   {{selectedArtist$?.value?.name}}
                 </div>

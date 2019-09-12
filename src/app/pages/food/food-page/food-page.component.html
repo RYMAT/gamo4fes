@@ -1,1 +1,22 @@
-<p>food-page works!</p>
+<div class="detail-page-content">
+  <div class="main-image">
+    <div class="title-text">Food</div>
+  </div>
+  <section class="main-content">
+    <h2 class="heading-text">アーティスト応援メニュー</h2>
+    <div class="inner-content container">
+
+      <div class="card-content">
+        <ng-container *ngFor="let shop of shops">
+          <article class="food">
+            <div class="food-image" [style.background-image]="'url(/'+ shop.food_image_path +')'"></div>
+            <span class="food-name">{{shop.name}}</span>
+            <pre>{{shop.food_image_path}}</pre>
+          </article>
+        </ng-container>
+        <div class="food empty hidden-md" *ngIf="shops?.length%4 === 3"></div>
+      </div>
+
+    </div>
+  </section>
+</div>
