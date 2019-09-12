@@ -10,3 +10,17 @@ body {
   background-color: #fafafa;
   font-family: 'Noto Sans JP', sans-serif;;
 }
+
+// ngx-bootstrapのスタイルをオーバーライド
+.modal-backdrop {
+  background-color: #fff;
+  &.in {
+    opacity: 0.95;
+  }
+}
+
+.modal-content {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}

@@ -15,14 +15,98 @@
       <!--アーティスト-->
       <div class="artist-content">
         <ng-container *ngFor="let artist of artists">
-          <article class="artist">
+          <article class="artist" (click)="onShowArtistModal(artist)">
             <div class="artist-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
             <span class="artist-name">{{artist.name}}</span>
           </article>
         </ng-container>
+
+        <!--ModalのTemplate-->
+        <ng-template #artistModalTemplate>
+          <div class="modal-inner">
+            <div class="heading-content text-right">
+              <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.hide()">
+                <span class="cross-mark"></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="left-content">
+                <figure class="image-content"
+                        [style.background-image]="'url(' + selectedArtist$?.value.image_path + ')'"
+                ></figure>
+              </div>
+              <div class="right-content">
+                <div class="artist-name">
+                  <!--アーティスト名-->
+                  {{selectedArtist$?.value?.name}}
+                </div>
+                <div class="information-content">
+                  <div class="information-left-content">
+                    <!--出演会場-->
+                    <div *ngFor="let stage of selectedArtist$?.value?.stages" class="stage-content">
+                      <span class="stage-name">
+                        <i class="icomoon-map-marker-alt-solid"></i> <span
+                        class="stage-text">{{stage.stage_name}}</span>
+                      </span>
+                      <span class="stage-time">{{stage.stage_date_at}}</span>
+                    </div>
+
+                  </div>
+                  <div class="information-right-content">
+                    <!--genre-->
+                    <span class="genre">
+                      {{selectedArtist$?.value?.genre}}
+                    </span>
+                  </div>
+                </div>
+                <!--description-->
+                <div class="description-content">
+                  <p class="description-text" *ngIf="selectedArtist$?.value?.profile_text">
+                    {{selectedArtist$?.value?.profile_text}}
+                  </p>
+                </div>
+
+                <div class="sns-link-contents">
+                  <!--WebSite-->
+                  <a *ngIf="selectedArtist$?.value?.web_url" class="sns-link"
+                     target="_blank"
+                     [href]="selectedArtist$?.value?.web_url">
+                    <i class="icomoon-laptop-solid"></i>
+                  </a>
+                  <!--Insta-->
+                  <a *ngIf="selectedArtist$?.value?.instagram_url" class="sns-link"
+                     target="_blank"
+                     [href]="selectedArtist$?.value?.instagram_url">
+                    <i class="icomoon-instagram-brands"></i>
+                  </a>
+                  <!--Twitter-->
+                  <a *ngIf="selectedArtist$?.value?.twitter_url" class="sns-link"
+                     target="_blank"
+                     [href]="selectedArtist$?.value?.twitter_url">
+                    <i class="icomoon-twitter-brands"></i>
+                  </a>
+                  <!--FB-->
+                  <a *ngIf="selectedArtist$?.value?.facebook_url" class="sns-link"
+                     target="_blank"
+                     [href]="selectedArtist$?.value?.facebook_url">
+                    <i class="icomoon-facebook-brands"></i>
+                  </a>
+                  <!--Youtube-->
+                  <a *ngIf="selectedArtist$?.value?.youtube_url" class="sns-link"
+                     target="_blank"
+                     [href]="selectedArtist$?.value?.youtube_url">
+                    <i class="icomoon-youtube-brands"></i>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </ng-template>
       </div>
     </div>
-
-
   </section>
 </div>

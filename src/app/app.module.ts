@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/header/header.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterModule } from './shared/footer/footer.module';
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FooterModule } from './shared/footer/footer.module';
     HttpClientModule,
     HeaderModule,
     FooterModule,
+    ModalModule.forRoot(),
   ],
   declarations: [
     AppComponent,
