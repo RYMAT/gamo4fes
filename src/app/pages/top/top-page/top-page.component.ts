@@ -3,6 +3,8 @@ import { JsonConvertService } from '../../../core/service/json-convert/json-conv
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
 import { AppConstant, RouteConstant } from '../../../core/constants';
+import { IRoutePaths } from '../../../core/constants/route.constant';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-page',
@@ -10,12 +12,14 @@ import { AppConstant, RouteConstant } from '../../../core/constants';
   styleUrls: ['./top-page.component.scss']
 })
 export class TopPageComponent implements OnInit {
+  readonly routes: IRoutePaths = RouteConstant;
 
   supports: Support[];
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
-              private sanitizer: DomSanitizer) {
+              private sanitizer: DomSanitizer,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -31,5 +35,9 @@ export class TopPageComponent implements OnInit {
 
   getSafeUrl(url: string): SafeUrl {
     return this.sanitizer.bypassSecurityTrustUrl(url);
+  }
+
+  onMovePage(path: string) {
+    this.router.navigate([path]);
   }
 }
