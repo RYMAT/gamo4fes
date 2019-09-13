@@ -3,12 +3,12 @@
     <div class="title-text">Food</div>
   </div>
   <section class="main-content">
-    <h2 class="heading-text">アーティスト応援メニュー</h2>
+    <h2 class="heading-text">アーティスト応援メニュー参加店</h2>
     <div class="inner-content container">
 
       <div class="card-content">
         <ng-container *ngFor="let shop of shops">
-          <article class="food">
+          <article class="food" (click)="onShowFoodModal(shop)">
             <div class="food-image" [style.background-image]="'url(/'+ shop.food_image_path +')'"></div>
             <span class="food-name">{{shop.name}}</span>
             <pre>{{shop.food_image_path}}</pre>
@@ -16,7 +16,88 @@
         </ng-container>
         <div class="food empty hidden-md" *ngIf="shops?.length%4 === 3"></div>
       </div>
-
     </div>
   </section>
 </div>
+
+<!--ModalのTemplate-->
+<ng-template #shopModalTemplate>
+  <div class="modal-inner">
+    <div class="heading-content text-right">
+      <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.hide()">
+        <span class="cross-mark"></span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="left-content">
+        <figure class="image-content"
+                [style.background-image]="'url(' + selectedShop$?.value.food_image_path + ')'"
+        ></figure>
+      </div>
+      <div class="right-content">
+        <div class="name-content">
+          <!--アーティスト名-->
+          {{selectedShop$?.value?.name}}
+        </div>
+        <div class="information-content">
+          <!--          <span class="have-stage">-->
+          <!--            <i class="icomoon-guitar-solid"></i> ライブ会場-->
+          <!--          </span>-->
+          <span class="shop-type">
+            <ng-container *ngIf="selectedShop$?.value?.is_eat_in && selectedShop$?.value?.is_take_out">
+              <i class="icomoon-utensils-solid"></i> <i class="icomoon-hamburger-solid"></i>
+              イートイン・テイクアウトOK
+            </ng-container>
+            <ng-container *ngIf="selectedShop$?.value?.is_eat_in && !selectedShop$?.value?.is_take_out">
+              <i class="icomoon-utensils-solid"></i>
+              イートインOK
+            </ng-container>
+            <ng-container *ngIf="!selectedShop$?.value?.is_eat_in && selectedShop$?.value?.is_take_out">
+              <i class="icomoon-hamburger-solid"></i>
+              テイクアウトOK
+            </ng-container>
+          </span>
+          <address class="address">
+            <a [href]="selectedShop$?.value?.google_map_url" target="_blank">
+              <i class="icomoon-map-marker-alt-solid"></i> {{selectedShop$?.value?.address}}
+            </a>
+          </address>
+        </div>
+        <!--description-->
+        <div class="description-content">
+          <p class="description-text" *ngIf="selectedShop$?.value?.shop_description">
+            {{selectedShop$?.value?.shop_description}}
+          </p>
+        </div>
+
+        <div class="sns-link-contents">
+          <!--WebSite-->
+          <a *ngIf="selectedShop$?.value?.web_url" class="sns-link"
+             target="_blank"
+             [href]="selectedShop$?.value?.web_url">
+            <i class="icomoon-laptop-solid"></i>
+          </a>
+          <!--Insta-->
+          <a *ngIf="selectedShop$?.value?.instagram_url" class="sns-link"
+             target="_blank"
+             [href]="selectedShop$?.value?.instagram_url">
+            <i class="icomoon-instagram-brands"></i>
+          </a>
+          <!--Twitter-->
+          <a *ngIf="selectedShop$?.value?.twitter_url" class="sns-link"
+             target="_blank"
+             [href]="selectedShop$?.value?.twitter_url">
+            <i class="icomoon-twitter-brands"></i>
+          </a>
+          <!--FB-->
+          <a *ngIf="selectedShop$?.value?.facebook_url" class="sns-link"
+             target="_blank"
+             [href]="selectedShop$?.value?.facebook_url">
+            <i class="icomoon-facebook-brands"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <pre>{{selectedShop$.value | json}}</pre>-->
+</ng-template>

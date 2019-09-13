@@ -1,4 +1,5 @@
 @import "../../../../styles/modules";
+@import "../../../../styles/variables";
 
 @include detailPageLayout;
 @include modalBase;
@@ -74,6 +75,29 @@
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
       letter-spacing: .05em;
+    }
+  }
+}
+
+.modal-body {
+  .information-content {
+    .address {
+      margin: 4px 0 0;
+      font-size: 12px;
+      letter-spacing: .05em;
+      > a {
+        text-decoration: none;
+        > i {
+          margin-right: 4px;
+        }
+      }
+    }
+    .shop-type {
+      font-size: 12px;
+      > i {
+        color: #666;
+        margin-right: 4px;
+      }
     }
   }
 }
