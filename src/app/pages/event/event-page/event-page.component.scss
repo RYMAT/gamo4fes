@@ -17,7 +17,8 @@
 
 .inner-content.container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-content {
@@ -79,7 +80,6 @@
         height: 250px;
         border-radius: 8px;
         background-color: #eee;
-        //background-image: url();
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -121,8 +121,6 @@
       position: absolute;
       right: -10%;
       bottom: -15%;
-      //width: 40%;
-      //height: 40%;
       width: 450px;
       height: 450px;
       border-radius: 50%;
