@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { NavigationEnd, Route, Router } from '@angular/router';
 import { RouteConstant } from '../../core/constants';
 import { Subscription } from 'rxjs';
@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
   // 表示中のroute
   activeRoute: string;
+
+  @Input() isActiveHamburger: boolean = false;
+  @Output() isActiveHamburgerChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private router: Router) {
     const { LIVE, FOOD, EVENT, ACCESS, GOODS } = RouteConstant;
@@ -33,5 +36,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  onChangeHamburgerState() {
+    this.isActiveHamburger = !this.isActiveHamburger;
+    this.isActiveHamburgerChange.emit(this.isActiveHamburger);
   }
 }
