@@ -22,11 +22,41 @@
   </nav>
 </header>
 
-<div class="box visible-xs-inline-block">
+<div class="box visible-xs-inline-block"
+     [@addModal]="isActiveHamburger.toString()">
   <div class="btn" [ngClass]="isActiveHamburger ? 'active' : 'not-active'"
        (click)="onChangeHamburgerState()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+<!--ナビゲーション-->
+  <ul *ngIf="isActiveHamburger"
+      [@navList]="''"
+      class="hamburger-nav-list">
+    <li class="nav-list-item"
+        [class.is-active]="activeRoute === ''">
+      <a class="nav-list-menu"
+         (click)="onMovePage('')">
+        <!--        <i class="icomoon-{{route.data?.icon}}"></i>-->
+        <span class="nav-title">トップ</span>
+      </a>
+    </li>
+    <li class="nav-list-item"
+        *ngFor="let route of navigation"
+        [class.is-active]="activeRoute === route.path">
+      <a class="nav-list-menu" (click)="onMovePage(route.path)">
+        <i class="icomoon-{{route.data?.icon}}"></i>
+        <span class="nav-title">{{route.data?.titleJp}}</span>
+      </a>
+    </li>
+    <li class="nav-list-item item-news">
+      <a class="nav-list-menu"
+         href="https://ameblo.jp/g4f-official" target="_blank"
+         (click)="onChangeHamburgerState()">
+        <i class="icomoon-laptop-solid"></i>
+        <span class="nav-title">ニュース</span>
+      </a>
+    </li>
+  </ul>
 </div>

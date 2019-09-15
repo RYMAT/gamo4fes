@@ -30,6 +30,7 @@ export const RouteConstant: IRoutePaths = {
       titleJp: 'ライブ',
       description: 'ライブ・出演者情報',
       isIndex: false,
+      icon: 'guitar-solid',
     }
   },
   FOOD: {
@@ -39,6 +40,7 @@ export const RouteConstant: IRoutePaths = {
       titleJp: 'フード',
       description: 'フード・出店情報',
       isIndex: false,
+      icon: 'utensils-solid',
     }
   },
   EVENT: {
@@ -48,6 +50,7 @@ export const RouteConstant: IRoutePaths = {
       titleJp: 'イベント',
       description: 'イベント情報',
       isIndex: false,
+      icon: 'gem-regular',
     }
   },
   ACCESS: {
@@ -57,6 +60,7 @@ export const RouteConstant: IRoutePaths = {
       titleJp: 'アクセス',
       description: 'アクセス・エリアマップ',
       isIndex: false,
+      icon: 'map-marked-alt-solid',
     }
   },
   GOODS: {
@@ -66,6 +70,7 @@ export const RouteConstant: IRoutePaths = {
       titleJp: 'グッズ',
       description: 'グッズ情報',
       isIndex: false,
+      icon: 'tshirt-solid',
     }
   },
 };
