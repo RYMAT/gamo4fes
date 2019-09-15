@@ -1,0 +1,73 @@
+@import "../../../../styles/modules";
+@import "../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+@include detailPageLayout;
+
+.main-image {
+  background-image: url("/assets/images/pages/goods-top.jpg");
+}
+
+.main-content {
+  .heading-text {
+    background-color: #00A95F;
+    background: linear-gradient(20deg, #00A95F, #00A95F);
+  }
+}
+
+.inner-content.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-top: 64px;
+}
+
+.card-content {
+  width: 500px;
+  text-align: left;
+  margin: 0 16px 32px;
+  .title-text {
+    padding-bottom: 16px;
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #666;
+    font-weight: bold;
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 2px;
+      width: 60px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #00A95F;
+      background: linear-gradient(20deg, #00A09B, #00B383);
+    }
+  }
+  .description-content {
+    padding-top: 16px;
+    letter-spacing: .05em;
+    line-height: 1.7;
+    color: #999;
+    .description-text {
+      display: inline-block;
+      margin-right: 16px;
+    }
+  }
+}
+
+.card-main {
+  margin-top: 16px;
+  text-align: center;
+  .image-content {
+    display: inline-block;
+    width: 300px;
+    min-height: 300px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
