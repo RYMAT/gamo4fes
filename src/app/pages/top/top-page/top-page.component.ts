@@ -60,7 +60,7 @@ export class TopPageComponent implements OnInit, AfterViewInit {
   onMoveGamoyon() {
     const rect = this.gamyonEl.nativeElement.getBoundingClientRect();
     this.ngZone.runOutsideAngular(() => {
-      $('html,body').animate({ scrollTop: rect.top + window.scrollY - 60 }, 200);
+      $('html,body').animate({ scrollTop: rect.top + window.scrollY - 60 }, 300);
     });
   }
 }
