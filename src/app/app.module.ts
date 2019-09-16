@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterModule } from './shared/footer/footer.module';
 import { ModalModule } from 'ngx-bootstrap';
 import { ScrollTopButtonModule } from './shared/scroll-top-button/scroll-top-button.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { ScrollTopButtonModule } from './shared/scroll-top-button/scroll-top-but
     FooterModule,
     ModalModule.forRoot(),
     ScrollTopButtonModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   declarations: [
     AppComponent,
