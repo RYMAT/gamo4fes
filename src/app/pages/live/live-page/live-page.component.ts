@@ -1,17 +1,18 @@
-import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
 import { Artist } from '../../../models/artist';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { StateService } from '../../../core/service/state/state.service';
 
 @Component({
   selector: 'app-live-page',
   templateUrl: './live-page.component.html',
   styleUrls: ['./live-page.component.scss']
 })
-export class LivePageComponent implements OnInit, OnDestroy {
+export class LivePageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('artistModalTemplate', { static: true }) modalTemplate: TemplateRef<any>;
 
@@ -23,6 +24,7 @@ export class LivePageComponent implements OnInit, OnDestroy {
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
               private sanitizer: DomSanitizer,
+              private state: StateService,
               private modalService: BsModalService) {
   }
 
@@ -31,6 +33,11 @@ export class LivePageComponent implements OnInit, OnDestroy {
     this.selectedArtist$.pipe(filter(v => !!v)).subscribe(() => {
       this.openModal();
     });
+  }
+
+  ngAfterViewInit(): void {
+    console.log('loaded');
+    this.state.isLoaded.next(true);
   }
 
   ngOnDestroy(): void {

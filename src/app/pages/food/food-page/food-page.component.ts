@@ -1,17 +1,18 @@
-import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, Title } from '@angular/platform-browser';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { Shop } from '../../../models/shop';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { StateService } from '../../../core/service/state/state.service';
 
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
   styleUrls: ['./food-page.component.scss']
 })
-export class FoodPageComponent implements OnInit, OnDestroy {
+export class FoodPageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('shopModalTemplate', { static: true }) modalTemplate: TemplateRef<any>;
 
   shops: Shop[];
@@ -22,6 +23,7 @@ export class FoodPageComponent implements OnInit, OnDestroy {
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
               private sanitizer: DomSanitizer,
+              private state: StateService,
               private modalService: BsModalService) {
   }
 
@@ -30,6 +32,11 @@ export class FoodPageComponent implements OnInit, OnDestroy {
     this.selectedShop$.pipe(filter(v => !!v)).subscribe(() => {
       this.openModal();
     });
+  }
+
+  ngAfterViewInit(): void {
+    console.log('loaded');
+    this.state.isLoaded.next(true);
   }
 
   ngOnDestroy(): void {
