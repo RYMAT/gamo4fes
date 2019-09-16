@@ -5,9 +5,3 @@ $fonts-path: '/assets/fonts';
   src: url($fonts-path + '/mamelon/Mamelon.otf') format("opentype");
   font-display: swap;
 }
-
-/**
-font-family: 'Lilita One', cursive;
-font-family: 'Noto Sans JP', sans-serif;
- */
-@import url('https://fonts.googleapis.com/css?family=Lilita+One|Noto+Sans+JP:300,400&display=swap');
