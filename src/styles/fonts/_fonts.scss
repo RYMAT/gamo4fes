@@ -1,7 +1,28 @@
 $fonts-path: '/assets/fonts';
 
+
 @font-face {
   font-family: 'mamelon';
   src: url($fonts-path + '/mamelon/Mamelon.otf') format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lilita One';
+  src: url($fonts-path + '/lilita/LilitaOne-Regular.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url($fonts-path + '/noto-sans/NotoSansJP-Regular.otf') format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url($fonts-path + '/noto-sans/NotoSansJP-Light.otf') format("opentype");
+  font-weight: 300;
   font-display: swap;
 }

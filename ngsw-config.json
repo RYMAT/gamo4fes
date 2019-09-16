@@ -11,11 +11,8 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js",
-          "assets/**/*.(json|png|jpg|svg|pdf|otf)",
+          "assets/**/*.(json|png|jpg|svg|pdf|otf|ttf)",
           "assets/*.(json|png|jpg|svg|pdf)"
-        ],
-        "urls": [
-          "https://fonts.googleapis.com/css?family=Lilita+One|Noto+Sans+JP:300,400&display=swap"
         ]
       }
     },
