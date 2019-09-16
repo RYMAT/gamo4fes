@@ -12,7 +12,6 @@
         transform: translateY(0);
       }
     }
-
   }
 }
 
@@ -29,7 +28,7 @@
     right: 0;
     bottom: 0;
     background-size: auto 75vh;
-    background-position: center 5vh;
+    background-position: center 3vh;
     background-repeat: no-repeat;
     &.town {
       z-index: 2;
@@ -91,10 +90,33 @@
     right: 0;
     bottom: 0;
     background-size: auto 75vh;
-    background-position: center 5vh;
+    background-position: center 3vh;
     background-repeat: no-repeat;
     background-image: url($image-path + "/top/kira.png");
     z-index: 2;
+  }
+  .scroll-btn {
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 60px;
+    display: inline-block;
+    border: none;
+    font-size: 28px;
+    color: #999;
+    z-index: 100;
+    margin-bottom: -60px;
+    padding: 4px 8px;
+    animation: blinkMove 1s ease-in-out 0s infinite alternate;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
@@ -125,6 +147,17 @@
   }
   100% {
     opacity: 1
+  }
+}
+
+@keyframes blinkMove {
+  0% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(15px);
   }
 }
 
@@ -261,6 +294,7 @@
 
 .time-table, .access {
   position: relative;
+  max-width: 1000px;
   &:before, &:after {
     content: '';
     display: inline-block;

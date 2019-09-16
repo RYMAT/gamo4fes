@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
@@ -7,6 +7,8 @@ import { IRoutePaths } from '../../../core/constants/route.constant';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/service/state/state.service';
 
+declare var $;
+
 @Component({
   selector: 'app-top-page',
   templateUrl: './top-page.component.html',
@@ -14,6 +16,7 @@ import { StateService } from '../../../core/service/state/state.service';
 })
 export class TopPageComponent implements OnInit, AfterViewInit {
   readonly routes: IRoutePaths = RouteConstant;
+  @ViewChild('gamoyon', { static: true }) gamyonEl: ElementRef;
 
   supports: Support[];
   isLoaded: boolean;
@@ -22,6 +25,7 @@ export class TopPageComponent implements OnInit, AfterViewInit {
               private titleService: Title,
               private sanitizer: DomSanitizer,
               private state: StateService,
+              private ngZone: NgZone,
               private router: Router) {
   }
 
@@ -51,5 +55,12 @@ export class TopPageComponent implements OnInit, AfterViewInit {
 
   onOpenTimeTable(path: string) {
     window.open(path);
+  }
+
+  onMoveGamoyon() {
+    const rect = this.gamyonEl.nativeElement.getBoundingClientRect();
+    this.ngZone.runOutsideAngular(() => {
+      $('html,body').animate({ scrollTop: rect.top + window.scrollY - 60 }, 200);
+    });
   }
 }
