@@ -5,7 +5,7 @@
   </div>
   <div class="main-content container">
 
-    <section class="section">
+    <section class="section what-gamoyon">
       <h2 class="heading-content">
         <span class="heading-text">What’s GAMO4Fes</span>
         <span class="heading-text-jp">がもよんフェスとは？</span>
@@ -21,7 +21,7 @@
       </p>
     </section>
     <!--Live-->
-    <section class="section row line-up-content">
+    <section class="section row line-up-content live">
       <h2 class="heading-content col-md-12">
         <span class="heading-text">Live</span>
         <span class="heading-text-jp">ライブ</span>
@@ -44,7 +44,7 @@
     </section>
 
     <!--Food-->
-    <section class="section row line-up-content">
+    <section class="section row line-up-content food">
       <h2 class="heading-content col-md-12 is-left">
         <span class="heading-text">Food</span>
         <span class="heading-text-jp">フード</span>
@@ -70,7 +70,7 @@
     </section>
 
     <!--event-->
-    <section class="section row line-up-content">
+    <section class="section row line-up-content event">
       <h2 class="heading-content col-md-12">
         <span class="heading-text">Event</span>
         <span class="heading-text-jp">イベント</span>
@@ -93,49 +93,52 @@
     </section>
 
     <!--Time Table -->
-    <section class="section panel-content">
-      <h2 class="heading-content">
-        <span class="heading-text">Time Table</span>
-        <span class="heading-text-jp">タイムテーブル</span>
-      </h2>
-      <div class="body-content">
-        <img class="time-table-image" draggable="false"
-             src="assets/images/time-table.jpg" alt="タイムテーブル"
-             (click)="onOpenTimeTable('assets/images/time-table.pdf')"
-        >
-      </div>
-    </section>
+    <div class="time-table">
+      <section class="section panel-content">
+        <h2 class="heading-content">
+          <span class="heading-text">Time Table</span>
+          <span class="heading-text-jp">タイムテーブル</span>
+        </h2>
+        <div class="body-content">
+          <img class="time-table-image" draggable="false"
+               src="assets/images/time-table.jpg" alt="タイムテーブル"
+               (click)="onOpenTimeTable('assets/images/time-table.pdf')">
+        </div>
+      </section>
+    </div>
     <!--Access-->
-    <section class="section panel-content">
-      <h2 class="heading-content">
-        <span class="heading-text">Access</span>
-        <span class="heading-text-jp">アクセス</span>
-      </h2>
-      <div class="body-content">
-        <div class="row">
-          <div class="col-md-6">
-            <!--GoogleMap-->
-            <div class="g-map-wrapper">
-              <iframe
-                class="g-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1681690027135!2d135.54499300129666!3d34.70093808033841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0e6b8f0204d%3A0x44862fbd61bc458a!2z6JKy55Sf5Zub5LiB55uu6aeF!5e0!3m2!1sja!2sjp!4v1568039110368!5m2!1sja!2sjp"
-                frameborder="0" style="border:0;" allowfullscreen=""
-              ></iframe>
+    <div class="access">
+      <section class="section panel-content">
+        <h2 class="heading-content">
+          <span class="heading-text">Access</span>
+          <span class="heading-text-jp">アクセス</span>
+        </h2>
+        <div class="body-content">
+          <div class="row">
+            <div class="col-md-6">
+              <!--GoogleMap-->
+              <div class="g-map-wrapper">
+                <iframe
+                  class="g-map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1681690027135!2d135.54499300129666!3d34.70093808033841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0e6b8f0204d%3A0x44862fbd61bc458a!2z6JKy55Sf5Zub5LiB55uu6aeF!5e0!3m2!1sja!2sjp!4v1568039110368!5m2!1sja!2sjp"
+                  frameborder="0" style="border:0;" allowfullscreen=""
+                ></iframe>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 address-content">
-            <div class="address-inner">
-              <dl class="map-definition-list text-left">
-                <dt class="definition-term"><i class="icomoon-map-marker-alt-solid"></i>蒲生四丁目</dt>
-                <dd class="definition-description">〒536-0004 大阪府大阪市城東区今福西３丁目６</dd>
-              </dl>
-              <app-button (clicked)="onMovePage(routes.ACCESS.path)"
-              ></app-button>
+            <div class="col-md-6 address-content">
+              <div class="address-inner">
+                <dl class="map-definition-list text-left">
+                  <dt class="definition-term"><i class="icomoon-map-marker-alt-solid"></i>蒲生四丁目</dt>
+                  <dd class="definition-description">〒536-0004 大阪府大阪市城東区今福西３丁目６</dd>
+                </dl>
+                <app-button (clicked)="onMovePage(routes.ACCESS.path)"
+                ></app-button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <!--Attention-->
     <section class="section panel-content">
       <h2 class="heading-content">
