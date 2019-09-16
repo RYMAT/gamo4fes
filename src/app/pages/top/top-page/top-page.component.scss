@@ -3,6 +3,11 @@
 
 .top-page-content {
   background-color: #fff;
+  &.is-loaded {
+    .main-image .bg-content.gyammossy {
+      transform: translateY(0);
+    }
+  }
 }
 
 .main-image {
@@ -17,10 +22,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url($image-path + "/top/town.png");
     background-size: auto 75vh;
     background-position: center 5vh;
     background-repeat: no-repeat;
+    &.town {
+      z-index: 2;
+      background-image: url($image-path + "/top/town.png");
+    }
+    &.gyammossy {
+      transform: translateY(120px);
+      will-change: transform;
+      transition: transform 800ms ease-in 1000ms;
+      z-index: 1;
+      background-image: url($image-path + "/top/gyammossy.png");
+    }
   }
   .logo-content {
     position: absolute;
@@ -36,6 +51,72 @@
     background-repeat: no-repeat;
     color: transparent;
     text-indent: -9999px;
+    z-index: 10;
+  }
+  .cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 180px;
+    margin: 80px auto 0;
+    background-image: url($image-path + "/top/kumo.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    will-change: transform;
+    animation: cloud 3s linear 0s infinite alternate;
+    &.cloud-2 {
+      right: auto;
+      margin: 0;
+      top: 200px;
+      animation: cloud 3s linear 2s infinite alternate;
+    }
+  }
+  .kira {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: auto 75vh;
+    background-position: center 5vh;
+    background-repeat: no-repeat;
+    background-image: url($image-path + "/top/kira.png");
+    z-index: 2;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(0, 0)
+  }
+  20% {
+    transform: translate(4px, 1px)
+  }
+  40% {
+    transform: translate(8px, 0px)
+  }
+  60% {
+    transform: translate(12px, -1px)
+  }
+  80% {
+    transform: translate(16px, 0px)
+  }
+  100% {
+    transform: translate(20px, 1px)
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.6
+  }
+  100% {
+    opacity: 1
   }
 }
 
@@ -536,6 +617,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 45px;
+  }
+}
+
+@media screen and (min-width:$screen-md) {
+  .main-image .kira {
+    animation: blink 800ms ease-in-out 0s infinite alternate;
   }
 }
 

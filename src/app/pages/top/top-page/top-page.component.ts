@@ -16,6 +16,7 @@ export class TopPageComponent implements OnInit, AfterViewInit {
   readonly routes: IRoutePaths = RouteConstant;
 
   supports: Support[];
+  isLoaded: boolean;
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
@@ -33,6 +34,7 @@ export class TopPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.state.isLoaded.next(true);
+    setTimeout(() => this.isLoaded = true);
   }
 
   private fetchSupports() {
