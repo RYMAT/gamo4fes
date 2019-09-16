@@ -40,7 +40,6 @@ export class LivePageComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('loaded');
     this.state.isLoaded.next(true);
   }
 

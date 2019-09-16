@@ -680,6 +680,8 @@
   background-image: linear-gradient(40deg, #00A73D, #00B383);
   background-image: -webkit-linear-gradient(40deg, #00A73D, #00B383);
   z-index: 20;
+  pointer-events: none;
+
   #loader {
     width: 170px;
     height: 20px;
