@@ -32,7 +32,6 @@ export class TopPageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('loaded');
     this.state.isLoaded.next(true);
   }
 

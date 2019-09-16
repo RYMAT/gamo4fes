@@ -6,6 +6,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { StateService } from '../../../core/service/state/state.service';
+import { AppConstant, RouteConstant } from '../../../core/constants';
 
 @Component({
   selector: 'app-live-page',
@@ -33,6 +34,9 @@ export class LivePageComponent implements OnInit, OnDestroy, AfterViewInit {
     this.selectedArtist$.pipe(filter(v => !!v)).subscribe(() => {
       this.openModal();
     });
+    const { LIVE } = RouteConstant;
+    const title: string = LIVE.data.description;
+    this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
   }
 
   ngAfterViewInit(): void {

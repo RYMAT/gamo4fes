@@ -6,6 +6,7 @@ import { Shop } from '../../../models/shop';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { StateService } from '../../../core/service/state/state.service';
+import { AppConstant, RouteConstant } from '../../../core/constants';
 
 @Component({
   selector: 'app-food-page',
@@ -32,10 +33,12 @@ export class FoodPageComponent implements OnInit, OnDestroy, AfterViewInit {
     this.selectedShop$.pipe(filter(v => !!v)).subscribe(() => {
       this.openModal();
     });
+    const { FOOD } = RouteConstant;
+    const title: string = FOOD.data.description;
+    this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
   }
 
   ngAfterViewInit(): void {
-    console.log('loaded');
     this.state.isLoaded.next(true);
   }
 

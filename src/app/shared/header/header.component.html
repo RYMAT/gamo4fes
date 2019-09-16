@@ -35,8 +35,7 @@
   <ng-container *ngIf="isActiveHamburger">
     <ul [@navList]="''"
         class="hamburger-nav-list">
-      <li class="nav-list-item"
-          [class.is-active]="activeRoute === ''">
+      <li class="top-link-item" [class.is-active]="activeRoute === ''">
         <a class="nav-list-menu"
            (click)="onMovePage('')">
           <!--        <i class="icomoon-{{route.data?.icon}}"></i>-->
