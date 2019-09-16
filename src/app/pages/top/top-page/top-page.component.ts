@@ -37,8 +37,10 @@ export class TopPageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.state.isLoaded.next(true);
-    setTimeout(() => this.isLoaded = true);
+    setTimeout(() => {
+      this.state.isLoaded.next(true);
+      this.isLoaded = true;
+    }, 500);
   }
 
   private fetchSupports() {
