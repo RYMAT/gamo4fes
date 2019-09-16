@@ -5,7 +5,53 @@
   <title>がもよんフェス2019</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta property="og:title" content="がもよんフェス2019 official Site"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description"
+        content="通称“がもよん”と愛され続けている、大阪の蒲生四丁目で今年も開催！！【音と食のハシゴ】をコンセプトにした聴いて・観て・食べて飲んで、遊べる地域密着型の音楽フェス😊"/>
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/favicons/favicon.ico">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="assets/favicons/android-chrome-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/android-chrome-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="assets/favicons/android-chrome-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/android-chrome-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/android-chrome-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="assets/favicons/android-chrome-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="assets/favicons/android-chrome-152x152.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicons/android-chrome-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="assets/favicons/android-chrome-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="assets/favicons/icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="assets/favicons/icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/icon-128x128.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="assets/favicons/icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="152x152" href="assets/favicons/icon-152x152.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/icon-160x160.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/icon-196x196.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicons/icon-256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="assets/favicons/icon-384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="24x24" href="assets/favicons/icon-24x24.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/icon-32x32.png">
+  <link rel="manifest" href="manifest.json">
+
+
 </head>
 <body>
 <noscript>
@@ -13,148 +59,148 @@
   <p style="color: red;">JavaScriptを有効にしてください。</p>
 </noscript>
 <app-root>
-<style>
-  .splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #00A73D;
-    background-image: linear-gradient(40deg, #00A73D, #00B383);
-    background-image: -webkit-linear-gradient(40deg, #00A73D, #00B383);
-  }
-
-  #loader {
-    width: 170px;
-    height: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -10px -85px;
-    opacity: .9;
-  }
-
-  #loader div {
-    height: 20px;
-    width: 20px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    -webkit-animation: animate 1.4s ease infinite;
-  }
-
-
-  #loader div:nth-child(2) {
-    margin-left: 30px;
-    -webkit-animation-delay: .08s;
-  }
-
-  #loader div:nth-child(3) {
-    margin-left: 60px;
-    -webkit-animation-delay: .16s;
-  }
-
-  #loader div:nth-child(4) {
-    margin-left: 90px;
-    -webkit-animation-delay: .24s;
-  }
-
-  #loader div:nth-child(5) {
-    margin-left: 120px;
-    -webkit-animation-delay: .32s;
-  }
-
-  #loader div:nth-child(6) {
-    margin-left: 150px;
-    -webkit-animation-delay: .40s;
-  }
-
-  @-webkit-keyframes animate {
-    0% {
-      left: 0px;
-      top: 0px;
+  <style>
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #00A73D;
+      background-image: linear-gradient(40deg, #00A73D, #00B383);
+      background-image: -webkit-linear-gradient(40deg, #00A73D, #00B383);
     }
-    5% {
-      left: -2px;
-      top: 4px;
-      width: 24px;
-      height: 16px;
-      -webkit-filter: blur(0.1px);
-    }
-    10% {
-      left: -1px;
-      top: 4px;
-      width: 22px;
-      height: 18px;
-      -webkit-filter: blur(0.1px);
-    }
-    /*halfway up*/
-    15% {
-      left: 1px;
-      top: -17px;
-      width: 18px;
-      height: 22px;
-      -webkit-filter: blur(0.3px);
-    }
-    /*top*/
-    22% {
-      left: 0px;
-      top: -34px;
-      width: 20px;
+
+    #loader {
+      width: 170px;
       height: 20px;
-      -webkit-filter: blur(0.2px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -10px -85px;
+      opacity: .9;
     }
-    /*halfway down*/
-    29% {
-      left: 1px;
-      top: -17px;
-      width: 18px;
-      height: 22px;
-      -webkit-filter: blur(0.3px);
-    }
-    /*bottom*/
-    34% {
-      left: 1px;
-      top: 0px;
-      width: 18px;
-      height: 22px;
-      -webkit-filter: blur(0.2px);
-    }
-    /*elastic bottom*/
-    40% {
-      left: -1px;
-      top: 4px;
-      width: 22px;
-      height: 18px;
-      -webkit-filter: blur(0.1px);
-    }
-    /*end*/
-    43% {
-      left: 0px;
-      top: 0px;
-      width: 20px;
+
+    #loader div {
       height: 20px;
-      -webkit-filter: blur(0px)
+      width: 20px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      -webkit-animation: animate 1.4s ease infinite;
     }
-    100% {
-      left: 0px;
-      top: 0px;
+
+
+    #loader div:nth-child(2) {
+      margin-left: 30px;
+      -webkit-animation-delay: .08s;
     }
-  }
-</style>
-<div class="splash">
-  <div id="loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+
+    #loader div:nth-child(3) {
+      margin-left: 60px;
+      -webkit-animation-delay: .16s;
+    }
+
+    #loader div:nth-child(4) {
+      margin-left: 90px;
+      -webkit-animation-delay: .24s;
+    }
+
+    #loader div:nth-child(5) {
+      margin-left: 120px;
+      -webkit-animation-delay: .32s;
+    }
+
+    #loader div:nth-child(6) {
+      margin-left: 150px;
+      -webkit-animation-delay: .40s;
+    }
+
+    @-webkit-keyframes animate {
+      0% {
+        left: 0px;
+        top: 0px;
+      }
+      5% {
+        left: -2px;
+        top: 4px;
+        width: 24px;
+        height: 16px;
+        -webkit-filter: blur(0.1px);
+      }
+      10% {
+        left: -1px;
+        top: 4px;
+        width: 22px;
+        height: 18px;
+        -webkit-filter: blur(0.1px);
+      }
+      /*halfway up*/
+      15% {
+        left: 1px;
+        top: -17px;
+        width: 18px;
+        height: 22px;
+        -webkit-filter: blur(0.3px);
+      }
+      /*top*/
+      22% {
+        left: 0px;
+        top: -34px;
+        width: 20px;
+        height: 20px;
+        -webkit-filter: blur(0.2px);
+      }
+      /*halfway down*/
+      29% {
+        left: 1px;
+        top: -17px;
+        width: 18px;
+        height: 22px;
+        -webkit-filter: blur(0.3px);
+      }
+      /*bottom*/
+      34% {
+        left: 1px;
+        top: 0px;
+        width: 18px;
+        height: 22px;
+        -webkit-filter: blur(0.2px);
+      }
+      /*elastic bottom*/
+      40% {
+        left: -1px;
+        top: 4px;
+        width: 22px;
+        height: 18px;
+        -webkit-filter: blur(0.1px);
+      }
+      /*end*/
+      43% {
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        -webkit-filter: blur(0px)
+      }
+      100% {
+        left: 0px;
+        top: 0px;
+      }
+    }
+  </style>
+  <div class="splash">
+    <div id="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
-</div>
 </app-root>
 </body>
 </html>
