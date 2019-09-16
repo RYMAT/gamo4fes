@@ -359,6 +359,7 @@
 * Live ~ Event
 */
 .section.line-up-content {
+  width: 100%;
   padding-top: 8px;
   .heading-content {
     position: absolute;
@@ -415,7 +416,8 @@
   height: 340px;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   &.is-left {
     padding-left: 0;
   }
@@ -950,5 +952,11 @@
     .g-map {
       height: 300px;
     }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .section.line-up-content {
+    width: auto;
   }
 }
