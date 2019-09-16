@@ -7,6 +7,7 @@ import { HeaderModule } from './shared/header/header.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterModule } from './shared/footer/footer.module';
 import { ModalModule } from 'ngx-bootstrap';
+import { ScrollTopButtonModule } from './shared/scroll-top-button/scroll-top-button.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { ModalModule } from 'ngx-bootstrap';
     HeaderModule,
     FooterModule,
     ModalModule.forRoot(),
+    ScrollTopButtonModule,
   ],
   declarations: [
     AppComponent,
@@ -23,4 +25,5 @@ import { ModalModule } from 'ngx-bootstrap';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
