@@ -4,9 +4,15 @@
 .top-page-content {
   background-color: #fff;
   &.is-loaded {
-    .main-image .bg-content.gyammossy {
-      transform: translateY(0);
+    .main-image {
+      .logo-content {
+        background-position-y: center;
+      }
+      .bg-content.gyammossy {
+        transform: translateY(0);
+      }
     }
+
   }
 }
 
@@ -32,7 +38,7 @@
     &.gyammossy {
       transform: translateY(120px);
       will-change: transform;
-      transition: transform 800ms ease-in 1000ms;
+      transition: transform 800ms ease-in 1.6s;
       z-index: 1;
       background-image: url($image-path + "/top/gyammossy.png");
     }
@@ -52,6 +58,8 @@
     color: transparent;
     text-indent: -9999px;
     z-index: 10;
+    background-position-y: 230px;
+    transition: background-position-y 600ms ease-in .2s;
   }
   .cloud {
     position: absolute;
@@ -620,7 +628,7 @@
   }
 }
 
-@media screen and (min-width:$screen-md) {
+@media screen and (min-width: $screen-md) {
   .main-image .kira {
     animation: blink 800ms ease-in-out 0s infinite alternate;
   }
