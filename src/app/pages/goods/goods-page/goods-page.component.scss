@@ -24,9 +24,9 @@
 }
 
 .card-content {
-  width: 500px;
+  width: 450px;
   text-align: left;
-  margin: 0 16px 32px;
+  margin: 0 8px 32px;
   .title-text {
     padding-bottom: 16px;
     position: relative;
@@ -69,5 +69,49 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .card-content {
+    width: 340px;
+    padding: 32px 16px;
+    margin: 0 4px 16px;
+    .title-text {
+      padding-bottom: 16px;
+      font-size: 16px;
+    }
+    .description-content {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .card-content {
+    width: calc(50vw - 30px);
+    padding: 32px 16px;
+  }
+  .card-main {
+    margin-top: 16px;
+    text-align: center;
+    .image-content {
+      display: inline-block;
+      width: calc(50vw - 30px - 32px);
+      min-height: calc(50vw - 30px - 32px);
+    }
+  }
+
+}
+
+@media screen and (max-width: $screen-xs) {
+  .card-content {
+    width: 90%;
+  }
+  .card-main {
+    .image-content {
+      width: 100%;
+      min-height: 200px;
+    }
   }
 }

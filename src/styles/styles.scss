@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #fafafa;
-  font-family: 'Noto Sans JP', sans-serif;;
+  font-family: 'Noto Sans JP', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 // ngx-bootstrapのスタイルをオーバーライド

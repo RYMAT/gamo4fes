@@ -30,33 +30,61 @@
               </button>
             </div>
             <div class="modal-body">
+              <!--SP用-->
+              <div class="heading-wrapper hidden-lg hidden-md">
+                <div class="name-content">
+                  <!--アーティスト名-->
+                  {{selectedArtist$?.value?.name}}
+                </div>
+                <div class="information-content">
+                  <div class="information-top-content">
+                    <!--出演会場-->
+                    <div *ngFor="let stage of selectedArtist$?.value?.stages" class="stage-content">
+                      <span class="stage-name">
+                        <i class="icomoon-map-regular"></i> <span
+                        class="stage-text">{{stage.stage_name}}</span>
+                      </span>
+                      <span class="stage-time">{{stage.stage_date_at}}</span>
+                    </div>
+                  </div>
+                  <div class="information-bottom-content">
+                    <!--genre-->
+                    <span class="genre">
+                      {{selectedArtist$?.value?.genre}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!--SP用終わり-->
+
               <div class="left-content">
                 <figure class="image-content"
                         [style.background-image]="'url(' + selectedArtist$?.value.image_path + ')'"
                 ></figure>
               </div>
               <div class="right-content">
-                <div class="name-content">
-                  <!--アーティスト名-->
-                  {{selectedArtist$?.value?.name}}
-                </div>
-                <div class="information-content">
-                  <div class="information-left-content">
-                    <!--出演会場-->
-                    <div *ngFor="let stage of selectedArtist$?.value?.stages" class="stage-content">
+                <div class="top-content hidden-xs hidden-sm">
+                  <div class="name-content">
+                    <!--アーティスト名-->
+                    {{selectedArtist$?.value?.name}}
+                  </div>
+                  <div class="information-content">
+                    <div class="information-left-content">
+                      <!--出演会場-->
+                      <div *ngFor="let stage of selectedArtist$?.value?.stages" class="stage-content">
                       <span class="stage-name">
-                        <i class="icomoon-map-marker-alt-solid"></i> <span
+                        <i class="icomoon-map-regular"></i> <span
                         class="stage-text">{{stage.stage_name}}</span>
                       </span>
-                      <span class="stage-time">{{stage.stage_date_at}}</span>
+                        <span class="stage-time">{{stage.stage_date_at}}</span>
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="information-right-content">
-                    <!--genre-->
-                    <span class="genre">
+                    <div class="information-right-content">
+                      <!--genre-->
+                      <span class="genre">
                       {{selectedArtist$?.value?.genre}}
                     </span>
+                    </div>
                   </div>
                 </div>
                 <!--description-->

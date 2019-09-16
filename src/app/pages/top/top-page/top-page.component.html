@@ -35,8 +35,10 @@
           <div class="description-text">
             これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。
           </div>
-          <app-button (clicked)="onMovePage(routes.LIVE.path)"
-          ></app-button>
+          <div class="btn-wrapper">
+            <app-button (clicked)="onMovePage(routes.LIVE.path)"
+            ></app-button>
+          </div>
         </div>
       </div>
     </section>
@@ -48,15 +50,20 @@
         <span class="heading-text-jp">フード</span>
       </h2>
       <div class="row">
+        <div class="col-md-6 col-sm-6 image-col visible-xs-block text-right">
+          <div class="image-content item-food"></div>
+        </div>
         <div class="col-md-6 col-sm-6 description-content is-left">
           <div class="hidden-xs"></div>
           <div class="description-text">
             これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。
           </div>
-          <app-button (clicked)="onMovePage(routes.FOOD.path)"
-          ></app-button>
+          <div class="btn-wrapper">
+            <app-button (clicked)="onMovePage(routes.FOOD.path)"
+            ></app-button>
+          </div>
         </div>
-        <div class="col-md-6 col-sm-6 image-col">
+        <div class="col-md-6 col-sm-6 image-col hidden-xs">
           <div class="image-content item-food"></div>
         </div>
       </div>
@@ -77,8 +84,10 @@
           <div class="description-text">
             これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。
           </div>
-          <app-button (clicked)="onMovePage(routes.EVENT.path)"
-          ></app-button>
+          <div class="btn-wrapper">
+            <app-button (clicked)="onMovePage(routes.EVENT.path)"
+            ></app-button>
+          </div>
         </div>
       </div>
     </section>
@@ -90,7 +99,10 @@
         <span class="heading-text-jp">タイムテーブル</span>
       </h2>
       <div class="body-content">
-        <img class="time-table-image" draggable="false" src="assets/images/time-table.jpg" alt="タイムテーブル">
+        <img class="time-table-image" draggable="false"
+             src="assets/images/time-table.jpg" alt="タイムテーブル"
+             (click)="onOpenTimeTable('assets/images/time-table.pdf')"
+        >
       </div>
     </section>
     <!--Access-->
@@ -113,7 +125,7 @@
           </div>
           <div class="col-md-6 address-content">
             <div class="address-inner">
-              <dl class="map-definition-list">
+              <dl class="map-definition-list text-left">
                 <dt class="definition-term"><i class="icomoon-map-marker-alt-solid"></i>蒲生四丁目</dt>
                 <dd class="definition-description">〒536-0004 大阪府大阪市城東区今福西３丁目６</dd>
               </dl>

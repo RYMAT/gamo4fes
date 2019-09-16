@@ -1,4 +1,5 @@
 @import "../../../../styles/modules";
+@import "../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 
 @include detailPageLayout;
 @include modalBase;
@@ -69,6 +70,7 @@
       transition: transform 0.3s ease 0s;
       will-change: transform;
       transform: scale(1);
+      border-radius: 8px;
     }
     &:hover .artist-image {
       transform: scale(1.2);
@@ -150,6 +152,76 @@
             line-height: 17px;
           }
         }
+      }
+    }
+  }
+}
+
+/**
+* SP
+*/
+@media screen and (max-width: $screen-md) {
+  //アーティスト
+  .card-content {
+    .artist {
+      margin: 8px;
+      width: 300px;
+      height: 300px;
+      // overlay
+      &:after {
+        width: 0;
+        height: 100%;
+      }
+      .artist-image {
+        width: 100%;
+        height: 100%;
+      }
+      .artist-name {
+        padding: 8px;
+        font-size: 12px;
+        letter-spacing: .03em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  //アーティスト
+  .card-content {
+    .artist {
+      margin: 4px;
+      width: calc((734px / 2) - 16px - 130px);
+      height: calc((734px / 2) - 16px - 130px);
+      // overlay
+      &:after {
+        width: 0;
+        height: 100%;
+      }
+      .artist-name {
+        padding: 8px;
+        font-size: 12px;
+        letter-spacing: .03em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  //アーティスト
+  .card-content {
+    .artist {
+      margin: 4px;
+      width: calc(50vw - 10px - 7px);
+      height: calc(50vw - 10px - 7px);
+      // overlay
+      &:after {
+        width: 0;
+        height: 100%;
+      }
+      .artist-name {
+        padding: 8px 4px;
+        font-size: 12px;
+        letter-spacing: .03em;
       }
     }
   }

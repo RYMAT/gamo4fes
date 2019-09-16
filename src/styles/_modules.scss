@@ -1,3 +1,5 @@
+@import ".././../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
 // 詳細ページ用のLayoutスタイル
 @mixin detailPageLayout() {
   .detail-page-content {
@@ -47,6 +49,35 @@
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+  }
+
+  /**
+  * SP
+  */
+  @media screen and (max-width: $screen-md) {
+    .main-image {
+      height: 300px;
+      .title-text {
+        height: 65px;
+        font-size: 60px;
+      }
+    }
+    .main-content {
+      padding-bottom: 64px;
+      .heading-text {
+        font-size: 16px;
+      }
+      .inner-content.container {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+    .card-content {
+      width: 100%;
+      padding: 32px 0;
+      border-radius: 8px;
+    }
+
   }
 }
 
@@ -169,5 +200,123 @@
         line-height: 1.8;
       }
     }
+  }
+
+  /**
+* SP
+*/
+  @media screen and (max-width: $screen-md) {
+    .modal-body {
+      flex-direction: column;
+      align-items: center;
+      .heading-wrapper {
+        width: 100%;
+        padding-bottom: 8px;
+        .name-content {
+          font-size: 26px;
+          letter-spacing: .05em;
+          margin-bottom: 4px;
+          font-weight: 300;
+        }
+        .information-content {
+          font-size: 12px;
+          color: #666;
+          text-align: right;
+          .information-top-content {
+            .stage-content {
+              display: inline-block;
+              margin-left: 8px;
+              vertical-align: middle;
+              .stage-name {
+                display: inline-block;
+                margin-right: 8px;
+                vertical-align: middle;
+                .stage-text {
+                  vertical-align: middle;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                }
+                > i {
+                  margin-right: 4px;
+                  vertical-align: middle;
+                }
+              }
+              .stage-time {
+                display: inline-block;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+      .left-content {
+        width: 100%;
+        padding: 0 0 16px;
+        .image-content {
+          width: 100%;
+          height: 400px;
+          display: inline-block;
+        }
+      }
+      .right-content {
+        width: 100%;
+        padding-bottom: 32px;
+        .name-content {
+          font-size: 22px;
+        }
+        .description-content {
+          min-height: 40px;
+        }
+        .sns-link-contents {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    .modal-body {
+      .heading-wrapper {
+        padding-bottom: 8px;
+        .name-content {
+          font-size: 24px;
+          margin-bottom: 4px;
+        }
+        .information-content {
+          font-size: 11px;
+          .information-top-content {
+            .stage-content {
+              margin-left: 8px;
+              .stage-name {
+                margin-right: 8px;
+                .stage-text {
+                }
+              }
+            }
+          }
+        }
+      }
+      .left-content {
+        padding: 0;
+        .image-content {
+          height: 250px;
+        }
+      }
+      .right-content {
+        width: 100%;
+        padding-bottom: 32px;
+        .description-content {
+          min-height: 40px;
+          font-size: 12px;
+        }
+        .sns-link-contents {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+
   }
 }

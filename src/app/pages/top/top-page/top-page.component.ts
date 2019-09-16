@@ -40,4 +40,8 @@ export class TopPageComponent implements OnInit {
   onMovePage(path: string) {
     this.router.navigate([path]);
   }
+
+  onOpenTimeTable(path: string) {
+    window.open(path);
+  }
 }

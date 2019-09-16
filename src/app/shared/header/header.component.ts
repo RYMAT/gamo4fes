@@ -3,7 +3,7 @@ import { NavigationEnd, Route, Router } from '@angular/router';
 import { RouteConstant } from '../../core/constants';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +11,15 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('addModal', [
-      state('true', style({ backgroundColor: 'rgba(255,255,255,0.9)', width: '150%', height: '150%' })),
-      state('false', style({ backgroundColor: 'rgba(255,255,255,0)', width: '*', height: '*' })),
-      transition('* => true', animate('700ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
-      transition('true => false', animate('700ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-      )),
+      state('true', style({ background: 'linear-gradient(40deg, #00A73D, #00B383)', width: '150%', height: '150%' })),
+      state('false', style({ background: 'transparent', width: '*', height: '*' })),
+      transition('false <=> true', animate('900ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
     ]),
     trigger('navList', [
-      state('void', style({ opacity: 0, transform: 'translateX(-1000px)', height: 0 })),
-      state('', style({ opacity: 1, transform: 'translateX(0)', height: '*' })),
-      transition(':enter', animate('1200ms cubic-bezier(0.25, 0.8, 0.25, 1)'), { delay: 700 }),
+      state('void', style({ opacity: 0, height: 0 })),
+      state('', style({ opacity: 1, height: '*' })),
+      transition(':enter', animate('300ms 500ms ease-in')),
     ]),
-
   ],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
@@ -60,6 +57,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   onMovePage(path: string) {
+    if (this.activeRoute === path) {
+      return;
+    }
     this.router.navigate([path]);
     if (this.isActiveHamburger) {
       this.onChangeHamburgerState();

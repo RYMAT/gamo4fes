@@ -143,24 +143,133 @@
   }
 }
 
+/**
+* SP
+*/
 @media screen and (max-width: $screen-md) {
   .card-content {
+    padding: 32px 16px;
+    .title-text {
+      font-size: 16px;
+    }
+    .description-content {
+      font-size: 12px;
+    }
     &.workshop {
       padding-bottom: 24px;
       .circle {
         display: block;
         position: static;
         margin-top: 16px;
-        padding: 8px;
+        padding: 8px 16px;
         border-radius: 30px;
         width: 100%;
         height: auto;
         text-align: center;
         .copy-text {
-          font-size: 15px;
+          font-size: 14px;
           padding: 0;
-          > br {
-            display: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .card-main {
+    .event-list {
+      margin: 0;
+      .list-item {
+        width: 300px;
+        margin: 8px;
+        padding-bottom: 12px;
+        .image-content {
+          width: 300px;
+          height: 300px;
+        }
+        .event-definition {
+          margin-top: 4px;
+          padding-right: 0;
+          .event-definition-term {
+            font-size: 13px;
+          }
+          .event-shop-name {
+            font-size: 12px
+          }
+          .event-definition-description {
+            font-size: 11px
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .card-main {
+    .event-list {
+      margin: 0;
+      .list-item {
+        width: calc(50vw - 10px - 32px);
+        margin: 4px;
+        padding-bottom: 12px;
+        .image-content {
+          width: calc(50vw - 10px - 32px);
+          height: calc(50vw - 10px - 32px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .card-content {
+    padding: 32px 8px;
+    .title-text {
+      font-size: 16px;
+    }
+    .description-content {
+      font-size: 12px;
+    }
+    &.workshop {
+      padding-bottom: 24px;
+      .circle {
+        display: block;
+        position: static;
+        margin-top: 16px;
+        padding: 8px 16px;
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        .copy-text {
+          font-size: 12px;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .card-main {
+    .event-list {
+      margin: 0;
+      .list-item {
+        width: calc(50vw - 10px - 14px);
+        margin: 4px;
+        padding-bottom: 12px;
+        .image-content {
+          width: calc(50vw - 10px - 14px);
+          height: calc(50vw - 10px - 14px);
+        }
+        .event-definition {
+          margin-top: 4px;
+          padding-right: 0;
+          .event-definition-term {
+            font-size: 13px;
+          }
+          .event-shop-name {
+            font-size: 12px
+          }
+          .event-definition-description {
+            font-size: 11px
           }
         }
       }
