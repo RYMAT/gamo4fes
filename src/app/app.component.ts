@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { animate, AnimationEvent, query, stagger, style, transition, trigger } from '@angular/animations';
 import { StateService } from './core/service/state/state.service';
 import { Subscription } from 'rxjs';
+import { GaService } from './core/service/ga/ga.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +24,30 @@ import { Subscription } from 'rxjs';
     ])
   ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
 
   state: string;
   splashState: string = '';
   subscription: Subscription = new Subscription();
 
-  constructor(private stateService: StateService) {
+  constructor(private stateService: StateService,
+              private router: Router,
+              private gaService: GaService) {
     this.subscription.add(this.stateService.isLoaded.subscribe(v => this.onLoad(v)));
+  }
+
+  ngOnInit(): void {
+    this.subscription.add(
+      this.router.events.pipe(
+        filter(e => e instanceof NavigationEnd)
+      ).subscribe((params: any) => {
+        this.gaService.sendPageView(params.url);
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   onActivate() {
