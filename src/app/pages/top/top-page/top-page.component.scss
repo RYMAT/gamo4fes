@@ -819,6 +819,37 @@
 }
 
 @media screen and (max-width: $screen-xs) {
+  .main-image {
+    height: 80vh;
+    .bg-content {
+      background-size: auto 75vh;
+      background-position: center 1vh;
+    }
+    .cloud {
+      height: 50px;
+      width: 180px;
+      margin-top: 40px;
+      &.cloud-2 {
+        right: auto;
+        margin: 0;
+        top: 110px;
+      }
+    }
+    .kira {
+      height: 100%;
+      background-size: auto 75vh;
+      background-position: center 1vh;
+    }
+    .scroll-btn {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      margin-bottom: -30px;
+    }
+  }
+
+
   .section.line-up-content {
     width: auto;
   }
