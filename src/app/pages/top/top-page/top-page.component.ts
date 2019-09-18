@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import { AppConstant, RouteConstant } from '../../../core/constants';
 import { IRoutePaths } from '../../../core/constants/route.constant';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/service/state/state.service';
+import * as imageLoaded from 'imagesloaded';
 
 declare var $;
 
@@ -14,7 +15,7 @@ declare var $;
   templateUrl: './top-page.component.html',
   styleUrls: ['./top-page.component.scss']
 })
-export class TopPageComponent implements OnInit, AfterViewInit {
+export class TopPageComponent implements OnInit {
   readonly routes: IRoutePaths = RouteConstant;
   @ViewChild('gamoyon', { static: true }) gamyonEl: ElementRef;
 
@@ -26,6 +27,7 @@ export class TopPageComponent implements OnInit, AfterViewInit {
               private sanitizer: DomSanitizer,
               private state: StateService,
               private ngZone: NgZone,
+              private el: ElementRef,
               private router: Router) {
   }
 
@@ -34,13 +36,17 @@ export class TopPageComponent implements OnInit, AfterViewInit {
     const { TOP } = RouteConstant;
     const title: string = TOP.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
-  }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
+    const els = this.el.nativeElement.querySelectorAll('.bg-image');
+    if (!els) {
       this.state.isLoaded.next(true);
       this.isLoaded = true;
-    }, 500);
+      return;
+    }
+    // 画像の読み込みを監視
+    imageLoaded(els, { background: true }).on('done', () => {
+      this.state.isLoaded.next(true);
+      this.isLoaded = true;
+    });
   }
 
   private fetchSupports() {

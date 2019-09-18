@@ -1,16 +1,18 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { StateService } from '../../../core/service/state/state.service';
 import { Title } from '@angular/platform-browser';
 import { AppConstant, RouteConstant } from '../../../core/constants';
+import * as imageLoaded from 'imagesloaded';
 
 @Component({
   selector: 'app-access-page',
   templateUrl: './access-page.component.html',
   styleUrls: ['./access-page.component.scss']
 })
-export class AccessPageComponent implements OnInit, AfterViewInit {
+export class AccessPageComponent implements OnInit {
 
   constructor(private state: StateService,
+              private el: ElementRef,
               private titleService: Title) {
   }
 
@@ -18,10 +20,14 @@ export class AccessPageComponent implements OnInit, AfterViewInit {
     const { ACCESS } = RouteConstant;
     const title: string = ACCESS.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
+    const els = this.el.nativeElement.querySelectorAll('.bg-image');
+    if (!els) {
+      this.state.isLoaded.next(true);
+      return;
+    }
+    // 画像の読み込みを監視
+    imageLoaded(els, { background: true }).on('done', () => {
+      this.state.isLoaded.next(true);
+    });
   }
-
-  ngAfterViewInit(): void {
-    this.state.isLoaded.next(true);
-  }
-
 }

@@ -1,5 +1,5 @@
 <div class="detail-page-content">
-  <div class="main-image">
+  <div class="main-image bg-image">
     <div class="title-text">Live</div>
   </div>
   <section class="main-content">
@@ -16,7 +16,7 @@
       <div class="card-content">
         <ng-container *ngFor="let artist of artists">
           <article class="artist" (click)="onShowArtistModal(artist)">
-            <div class="artist-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
+            <div class="artist-image bg-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
             <span class="artist-name">{{artist.name}}</span>
           </article>
         </ng-container>
@@ -125,14 +125,10 @@
                      [href]="selectedArtist$?.value?.youtube_url">
                     <i class="icomoon-youtube-brands"></i>
                   </a>
-
                 </div>
               </div>
             </div>
-
-
           </div>
-
         </ng-template>
       </div>
     </div>

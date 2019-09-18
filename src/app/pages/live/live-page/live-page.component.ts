@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
 import { Artist } from '../../../models/artist';
@@ -7,25 +7,29 @@ import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { StateService } from '../../../core/service/state/state.service';
 import { AppConstant, RouteConstant } from '../../../core/constants';
+import * as imageLoaded from 'imagesloaded';
 
 @Component({
   selector: 'app-live-page',
   templateUrl: './live-page.component.html',
   styleUrls: ['./live-page.component.scss']
 })
-export class LivePageComponent implements OnInit, OnDestroy, AfterViewInit {
+export class LivePageComponent implements OnInit, OnDestroy {
 
   @ViewChild('artistModalTemplate', { static: true }) modalTemplate: TemplateRef<any>;
-
+  isLoaded: boolean;
   artists: Artist[];
   modalRef: BsModalRef;
-
   selectedArtist$: BehaviorSubject<Artist> = new BehaviorSubject<Artist>(null);
+
+  private isLoadedBgImage: boolean;
+  private isLoadedImage: boolean;
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
               private sanitizer: DomSanitizer,
               private state: StateService,
+              private el: ElementRef,
               private modalService: BsModalService) {
   }
 
@@ -37,15 +41,32 @@ export class LivePageComponent implements OnInit, OnDestroy, AfterViewInit {
     const { LIVE } = RouteConstant;
     const title: string = LIVE.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
-  }
-
-  ngAfterViewInit(): void {
-    this.state.isLoaded.next(true);
+    const els = this.el.nativeElement.querySelectorAll('.bg-image');
+    if (!els) {
+      this.state.isLoaded.next(true);
+      return;
+    }
+    // 画像の読み込みを監視
+    imageLoaded(els, { background: true }).on('done', () => {
+      this.isLoadedBgImage = true;
+      this.onCheckImgLoaded();
+    });
+    imageLoaded('time-table-image', ).on('done', () => {
+      this.isLoadedImage = true;
+      this.onCheckImgLoaded();
+    });
   }
 
   ngOnDestroy(): void {
     if (!this.selectedArtist$.closed) {
       this.selectedArtist$.unsubscribe();
+    }
+  }
+
+  private onCheckImgLoaded() {
+    if (this.isLoadedBgImage && this.isLoadedImage) {
+      this.state.isLoaded.next(true);
+      this.isLoaded = true;
     }
   }
 

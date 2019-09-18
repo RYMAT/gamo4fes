@@ -1,15 +1,15 @@
 <div class="top-page-content" [class.is-loaded]="isLoaded">
   <div class="main-image">
-    <div class="bg-content town"></div>
-    <div class="bg-content gyammossy"></div>
-    <div class="cloud cloud-1"></div>
-    <div class="cloud cloud-2"></div>
+    <div class="bg-content town bg-image"></div>
+    <div class="bg-content gyammossy bg-image"></div>
+    <div class="cloud cloud-1 bg-image"></div>
+    <div class="cloud cloud-2 bg-image"></div>
     <div class="kira"></div>
     <button (click)="onMoveGamoyon()"
             type="button" class="scroll-btn">
       <i class="icomoon-angle-down-solid"></i>
     </button>
-    <div class="logo-content">がもよんフェス2019</div>
+    <div class="logo-content bg-image">がもよんフェス2019</div>
   </div>
   <div class="main-content container">
 
@@ -36,7 +36,7 @@
       </h2>
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
-          <div class="image-content item-live"></div>
+          <div class="image-content item-live bg-image"></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content">
           <div class="hidden-xs"></div>
@@ -88,7 +88,7 @@
       </h2>
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
-          <div class="image-content item-event"></div>
+          <div class="image-content item-event bg-image"></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content">
           <div class="hidden-xs"></div>
@@ -480,15 +480,3 @@
     </div>
   </div>
 </div>
-<!--Splash-->
-<div class="splash" *ngIf="!isLoaded">
-  <div id="loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<!--<pre>{{supports | json}}</pre>-->

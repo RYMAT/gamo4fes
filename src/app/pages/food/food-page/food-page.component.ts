@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, Title } from '@angular/platform-browser';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
@@ -7,13 +7,14 @@ import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { StateService } from '../../../core/service/state/state.service';
 import { AppConstant, RouteConstant } from '../../../core/constants';
+import * as imageLoaded from 'imagesloaded';
 
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
   styleUrls: ['./food-page.component.scss']
 })
-export class FoodPageComponent implements OnInit, OnDestroy, AfterViewInit {
+export class FoodPageComponent implements OnInit, OnDestroy {
   @ViewChild('shopModalTemplate', { static: true }) modalTemplate: TemplateRef<any>;
 
   shops: Shop[];
@@ -25,6 +26,7 @@ export class FoodPageComponent implements OnInit, OnDestroy, AfterViewInit {
               private titleService: Title,
               private sanitizer: DomSanitizer,
               private state: StateService,
+              private el: ElementRef,
               private modalService: BsModalService) {
   }
 
@@ -36,11 +38,17 @@ export class FoodPageComponent implements OnInit, OnDestroy, AfterViewInit {
     const { FOOD } = RouteConstant;
     const title: string = FOOD.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
+    const els = this.el.nativeElement.querySelectorAll('.bg-image');
+    if (!els) {
+      this.state.isLoaded.next(true);
+      return;
+    }
+    // 画像の読み込みを監視
+    imageLoaded(els, { background: true }).on('done', () => {
+      this.state.isLoaded.next(true);
+    });
   }
 
-  ngAfterViewInit(): void {
-    this.state.isLoaded.next(true);
-  }
 
   ngOnDestroy(): void {
     if (!this.selectedShop$.closed) {
