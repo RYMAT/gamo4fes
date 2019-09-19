@@ -157,7 +157,6 @@
       position: relative;
       width: 50%;
       padding-bottom: 40px;
-      font-family: "Noto Sans JP", sans-serif;
       .name-content {
         font-size: 26px;
         letter-spacing: .05em;
@@ -165,6 +164,7 @@
         padding: 0 0 4px 0;
         border-bottom: 1px solid #aaa;
         font-weight: 300;
+        font-family: 'Noto Sans JP', sans-serif;
       }
     }
 
@@ -217,6 +217,7 @@
           letter-spacing: .05em;
           margin-bottom: 4px;
           font-weight: 300;
+          font-family: "Noto Sans JP", sans-serif;
         }
         .information-content {
           font-size: 12px;

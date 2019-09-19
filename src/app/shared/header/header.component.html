@@ -2,7 +2,7 @@
   <nav class="navbar navbar-default navbar-static-top navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-logo" [routerLink]="''"></a>
+        <a class="navbar-logo" [routerLink]="''" title="TOPページ"></a>
         <ul class="nav-list">
           <li *ngFor="let route of navigation"
               class="list-item item-{{route.path}}"
@@ -33,7 +33,7 @@
   </div>
   <!--ナビゲーション-->
   <ng-container *ngIf="isActiveHamburger">
-    <ul [@navList]="''"
+    <ul [@navList]="navAnimationState" (@navList.done)="onAnimationDone($event)"
         class="hamburger-nav-list">
       <li class="top-link-item" [class.is-active]="activeRoute === ''">
         <a class="nav-list-menu"

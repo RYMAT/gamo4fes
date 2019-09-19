@@ -3,7 +3,7 @@ import { NavigationEnd, Route, Router } from '@angular/router';
 import { RouteConstant } from '../../core/constants';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, AnimationEvent, query, stagger, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
@@ -16,10 +16,16 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       transition('false <=> true', animate('900ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
     ]),
     trigger('navList', [
-      state('void', style({ opacity: 0, height: 0 })),
-      state('', style({ opacity: 1, height: '*' })),
-      transition(':enter', animate('300ms 500ms ease-in')),
-    ]),
+      transition('default => show', [
+        query('.nav-list-menu', [
+          style({ opacity: 0, transform: 'translateX(200px)' }),
+          stagger(100, [
+            animate('600ms 50ms cubic-bezier(0.6, 0.15, 0.3, 0.8)',
+              style({ opacity: 1, transform: 'translateX(0)' }))
+          ])
+        ])
+      ])
+    ])
   ],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
@@ -28,6 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
   // 表示中のroute
   activeRoute: string;
+  navAnimationState: string = 'default';
 
   @Input() isActiveHamburger: boolean = false;
   @Output() isActiveHamburgerChange: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -63,6 +70,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.router.navigate([path]);
     if (this.isActiveHamburger) {
       this.onChangeHamburgerState();
+    }
+  }
+
+  onAnimationDone(e: AnimationEvent) {
+    // 初回のみ 'defaultへ' ngForのレンダリング後にアニメーションさせるため
+    if (e.fromState === 'void' && e.toState === 'default') {
+      this.navAnimationState = 'show';
+      return;
+    }
+    if (e.toState === 'show') {
+      this.navAnimationState = 'default';
+      return;
     }
   }
 }
