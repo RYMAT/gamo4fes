@@ -1,5 +1,8 @@
 @import "../../../../styles/variables";
+@import "../../../../styles/modules";
 @import "../../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+@include modalBase;
 
 .top-page-content {
   background-color: #fff;
@@ -298,6 +301,13 @@
   }
   &.c7 {
     background-image: url('/assets/images/top/circle/c7.svg');
+  }
+}
+
+.what-gamoyon {
+  .btn-wrapper {
+    padding: 48px 0 0;
+    text-align: right;
   }
 }
 
@@ -743,6 +753,54 @@
   }
 }
 
+
+/**
+* Modal Style
+*/
+.modal-body {
+  display: block;
+  .top-content {
+    .heading-content {
+      text-align: center;
+      font-family: "Lilita One", sans-serif;
+      color: #00A95F;
+      margin: 0;
+      padding: 0 0 16px 0;
+      position: relative;
+      font-size: 30px;
+    }
+    .heading-text {
+      display: block;
+      text-align: center;
+      letter-spacing: .05em;
+      font-size: 64px;
+    }
+    .heading-text-jp {
+      display: block;
+      margin-top: 8px;
+      font-size: 45%;
+      font-family: "mamelon", sans-serif;
+    }
+    .message-image {
+      height: 380px;
+      background-image: url($image-path + '/top/message.jpg');
+    }
+  }
+  .bottom-content {
+    padding-top: 24px;
+    color: #666;
+    line-height: 1.7;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    white-space: pre-line;
+    .description-text {
+      > span {
+        display: block;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $screen-md) {
   .main-image .kira {
     animation: blink 800ms ease-in-out 0s infinite alternate;
@@ -977,6 +1035,40 @@
       transform: translateX(0);
     }
   }
+
+  :host ::ng-deep {
+    .what-gamoyon.section .btn-wrapper {
+      padding-top: 0;
+      .btn-message .btn-main {
+        width: 200px;
+        font-size: 12px;
+      }
+    }
+  }
+  .modal-body {
+    .top-content {
+      .heading-content {
+        font-size: 24px;
+      }
+      .heading-text {
+        font-size: 44px;
+      }
+      .heading-text-jp {
+        margin-top: 8px;
+        font-size: 45%;
+      }
+      .message-image {
+        height: 250px;
+      }
+    }
+    .bottom-content {
+      padding-top: 16px;
+      .description {
+        font-size: 12px;
+        padding: 0 8px;
+      }
+    }
+  }
 }
 
 .is-display-none {
@@ -1007,3 +1099,12 @@
     transform: translateX(0);
   }
 }
+
+:host ::ng-deep {
+  .btn-message .btn-main {
+    width: 250px;
+    color: #00A95F;
+    background: transparent;
+  }
+}
+

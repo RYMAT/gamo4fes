@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
@@ -7,8 +7,8 @@ import { IRoutePaths } from '../../../core/constants/route.constant';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/service/state/state.service';
 import * as imageLoaded from 'imagesloaded';
-import { ParallaxConfig } from 'ngx-parallax';
 import * as _ from 'lodash';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
 declare var $;
 
@@ -20,10 +20,12 @@ declare var $;
 export class TopPageComponent implements OnInit {
   readonly routes: IRoutePaths = RouteConstant;
   @ViewChild('gamoyon', { static: true }) gamyonEl: ElementRef;
+  @ViewChild('messageModal', { static: true }) modalTemplate: TemplateRef<any>;
 
   supports: Support[];
   isLoaded: boolean;
   windowHeight: number;
+  modalRef: BsModalRef;
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
@@ -31,6 +33,8 @@ export class TopPageComponent implements OnInit {
               private state: StateService,
               private ngZone: NgZone,
               private el: ElementRef,
+              private renderer: Renderer2,
+              private modalService: BsModalService,
               private router: Router) {
   }
 
@@ -76,19 +80,15 @@ export class TopPageComponent implements OnInit {
     });
   }
 
-  parallaxConfig(ratio?: number, isX?: boolean): ParallaxConfig {
-    return isX ?
-      {
-        cssKey: 'transform',
-        cssProperty: 'transform:translateX',
-        cssUnit: '%',
-        ratio: _.isNumber(ratio) ? ratio : -0.02
-      } :
-      {
-        cssKey: 'transform',
-        cssProperty: 'transform:translateY',
-        cssUnit: '%',
-        ratio: _.isNumber(ratio) ? ratio : -0.02
-      };
+  openMessageModal() {
+    this.modalRef = this.modalService.show(this.modalTemplate, { class: 'modal-lg' });
+    const body = document.body;
+    this.renderer.addClass(body, 'is-modal');
+  }
+
+  onModalClose() {
+    this.modalRef.hide();
+    const body = document.body;
+    this.renderer.removeClass(body, 'is-modal');
   }
 }

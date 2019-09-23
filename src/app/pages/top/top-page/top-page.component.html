@@ -36,6 +36,13 @@
         がもよんフェスを通して、笑顔と元気いっぱいなこの街を全国各地の人達に知ってもらいたい。<br>
         美味しいご飯と、最高の音楽が溢れるこの街で特別な1日を過ごしましょう。 お腹も心も腹ペコで遊びに来てください♪
       </p>
+      <div class="btn-wrapper">
+        <app-button
+          class="btn-message"
+          labelText="主催者からのメッセージ"
+          (click)="openMessageModal()"
+        ></app-button>
+      </div>
     </section>
     <!--Live-->
     <section class="section row line-up-content live">
@@ -507,3 +514,61 @@
     </div>
   </div>
 </div>
+
+<ng-template #messageModal>
+  <div class="modal-inner">
+    <div class="heading-content text-right">
+      <button type="button" class="btn-close" aria-label="Close" (click)="onModalClose()">
+        <span class="cross-mark"></span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="top-content">
+        <div class="heading-content">
+          <span class="heading-text">Message</span>
+          <span class="heading-text-jp">主催者から皆様へのご挨拶</span>
+        </div>
+        <figure class="image-content message-image"
+        ></figure>
+      </div>
+      <div class="bottom-content">
+        <div class="description">
+          <!--description-->
+          <p class="description-text">
+            <span>
+            2015年からスタートした【GAMO4 Fes.】が今年で5年目の開催をさせていただくことになりました。
+            支えてくださる皆様のおかげで、今日という日まで歩んで来ることができました。
+            </span>
+            <span>
+            わたしが音楽と出逢い【UNION☆JACK】というバンドで活動をしてきて今年で15周年を迎える中、2014年に立ち上げた【cafe bar
+            鐘の音】の店舗経営を通じて、様々な地域の方々と関わらせて頂き、数えきれぬほどの蒲生四丁目という街の魅力を感じ、自分の世代を含めもっと沢山の方に知ってもらいたい。そして過去に主催してきた音楽ライブイベントとは違った『音と食』をテーマに地域の企業やお店、住人の皆様と全国各地のアーティストやお客様を繋いでゆく。そんなフェスを作ろう！と立ち上がりました。
+            </span>
+            <span>
+            一人の意思から始めたこのイベント、これまでの道のりは決して平坦なものではなく何度も何度もやめようと思ったこともありました。
+            失敗で学んだこと活かし試行錯誤を繰り返しながら回を重ねていく度に、私に賛同してくれるスポンサーの方々や参加して下さる皆様に背中を押されて今年まで続けてこれました。
+            </span>
+            <span>
+            普段ライブを見に行かない人でも気軽に足を運べるイベント、音楽に触れるきっかけづくりを目指し、始まった初年度。
+            そして、2年目から入場無料に。過去述べ3000人以上の動員も記録。その後、バルメニューの導入により食べ歩きと音楽ライブの地域回遊を実現し、多方面からのポジティブな反響の声を頂きこのイベントが成長しました！
+            「蒲生四丁目の文化をつくった」と素敵な言葉までいただけるようになり、改めて必要性を感じ「がもよんフェス」をしっかりと運営し、継続させ、成功させる事への前向きな気持ちと責任を感じてる日々です。
+            </span>
+            <span>
+            こうやって夢をカタチにできたことを幸せに感じております。がもよんフェスを象徴する『音と食の融合』をコンセプトに今年も立ち上がります。
+            始まりがあれば終わりがある。いつまでこのイベントを継続できるかは約束できませんが、応援して下さる皆様の期待に答えられるよう覚悟をもって尽力していこうと思ってます。
+            </span>
+            <br>
+            １１月１０日の日曜日。
+            お腹も心も満たされる、人と人が結ばれる素敵な１日をお届けします。
+            皆様のご来場を心よりお待ちしております。
+          </p>
+          <p class="text-right">
+            UNION☆JACK(Vo) / cafe bar 鐘の音 <br>
+            GAMO4Fes. 実行委員会 代表 0x3x8
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</ng-template>

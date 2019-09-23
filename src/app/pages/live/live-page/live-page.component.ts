@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
 import { Artist } from '../../../models/artist';
@@ -30,6 +30,7 @@ export class LivePageComponent implements OnInit, OnDestroy {
               private sanitizer: DomSanitizer,
               private state: StateService,
               private el: ElementRef,
+              private renderer: Renderer2,
               private modalService: BsModalService) {
   }
 
@@ -90,6 +91,14 @@ export class LivePageComponent implements OnInit, OnDestroy {
   }
 
   private openModal() {
+    const body = document.body;
+    this.renderer.addClass(body, 'is-modal');
     this.modalRef = this.modalService.show(this.modalTemplate, { class: 'modal-lg' });
+  }
+
+  onModalClose() {
+    this.modalRef.hide();
+    const body = document.body;
+    this.renderer.removeClass(body, 'is-modal');
   }
 }

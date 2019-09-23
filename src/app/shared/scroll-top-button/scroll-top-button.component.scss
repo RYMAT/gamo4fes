@@ -37,6 +37,12 @@
   }
 }
 
+:host-context(.is-modal) {
+  .ss-scroll-top-button-wrapper {
+    display: none;
+  }
+}
+
 @media screen and (max-width: $screen-md) {
   .ss-scroll-top-button-wrapper {
     right: 16px;
