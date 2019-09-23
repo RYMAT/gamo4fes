@@ -1108,3 +1108,16 @@
   }
 }
 
+.back-button-wrapper {
+  margin-top: 24px;
+  .btn-back {
+    outline: none;
+    box-shadow: none;
+    color: #00A95F;
+    text-decoration: none;
+    > i {
+      margin-right: 16px;
+    }
+  }
+}
+
