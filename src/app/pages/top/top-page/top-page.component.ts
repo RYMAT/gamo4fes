@@ -7,6 +7,8 @@ import { IRoutePaths } from '../../../core/constants/route.constant';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/service/state/state.service';
 import * as imageLoaded from 'imagesloaded';
+import { ParallaxConfig } from 'ngx-parallax';
+import * as _ from 'lodash';
 
 declare var $;
 
@@ -21,6 +23,7 @@ export class TopPageComponent implements OnInit {
 
   supports: Support[];
   isLoaded: boolean;
+  windowHeight: number;
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
@@ -47,6 +50,7 @@ export class TopPageComponent implements OnInit {
       this.state.isLoaded.next(true);
       this.isLoaded = true;
     });
+    this.windowHeight = window.innerHeight;
   }
 
   private fetchSupports() {
@@ -70,5 +74,21 @@ export class TopPageComponent implements OnInit {
     this.ngZone.runOutsideAngular(() => {
       $('html,body').animate({ scrollTop: rect.top + window.scrollY - 60 }, 300);
     });
+  }
+
+  parallaxConfig(ratio?: number, isX?: boolean): ParallaxConfig {
+    return isX ?
+      {
+        cssKey: 'transform',
+        cssProperty: 'transform:translateX',
+        cssUnit: '%',
+        ratio: _.isNumber(ratio) ? ratio : -0.02
+      } :
+      {
+        cssKey: 'transform',
+        cssProperty: 'transform:translateY',
+        cssUnit: '%',
+        ratio: _.isNumber(ratio) ? ratio : -0.02
+      };
   }
 }

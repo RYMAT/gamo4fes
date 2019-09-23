@@ -211,109 +211,39 @@
   }
 }
 
-.section {
-  position: relative;
-  &:before, &:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-  &.what-gamoyon {
-    &:before {
-      background-image: url('/assets/images/top/circle/c1.svg');
-      left: 0;
-      bottom: 0;
-      width: 220px;
-      height: 220px;
-      margin-left: -130px;
-      margin-bottom: -60px;
-    }
-    &:after {
-      background-image: url('/assets/images/top/circle/c4.svg');
-      left: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      margin-bottom: -100px;
-    }
-  }
-  &.line-up-content {
-    &.live {
-      &:before {
-        background-image: url('/assets/images/top/circle/c2.svg');
-        right: 0;
-        bottom: 0;
-        width: 200px;
-        height: 200px;
-        margin-right: -130px;
-        margin-bottom: -100px;
-      }
-      &:after {
-        background-image: url('/assets/images/top/circle/c3.svg');
-        right: 0;
-        bottom: 0;
-        width: 130px;
-        height: 130px;
-        margin-bottom: -170px;
-      }
-    }
-    &.food {
-      &:before {
-        background-image: url('/assets/images/top/circle/c7.svg');
-        left: 0;
-        bottom: 0;
-        width: 400px;
-        height: 400px;
-        margin-left: -400px;
-        margin-bottom: -300px;
-        opacity: .3;
-      }
-    }
-    &.event {
-      &:before {
-        background-image: url('/assets/images/top/circle/c1.svg');
-        right: 0;
-        bottom: 0;
-        width: 100px;
-        height: 100px;
-        margin-right: -70px;
-        margin-bottom: -70px;
-      }
-      &:after {
-        background-image: url('/assets/images/top/circle/c3.svg');
-        right: 0;
-        bottom: 0;
-        width: 160px;
-        height: 160px;
-        margin-bottom: -170px;
-      }
-    }
-  }
-}
-
-.time-table, .access {
-  position: relative;
-  max-width: 1000px;
-  &:before, &:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
-  }
-}
-
-.time-table {
-  width: 100%;
-  position: relative;
-  &:before {
+/*** Circle ***/
+.circle-content {
+  display: inline-block;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+  &.c1 {
     background-image: url('/assets/images/top/circle/c1.svg');
+  }
+  &.c2 {
+    background-image: url('/assets/images/top/circle/c2.svg');
+  }
+  &.c3 {
+    background-image: url('/assets/images/top/circle/c3.svg');
+  }
+  &.c4 {
+    background-image: url('/assets/images/top/circle/c4.svg');
+  }
+  &.c5 {
+    background-image: url('/assets/images/top/circle/c5.svg');
+  }
+  &.c6 {
+    background-image: url('/assets/images/top/circle/c6.svg');
+  }
+  &.c7 {
+    background-image: url('/assets/images/top/circle/c7.svg');
+  }
+}
+
+.what-gamoyon .circle-content {
+  &:nth-of-type(1) {
     left: 0;
     bottom: 0;
     width: 220px;
@@ -321,21 +251,96 @@
     margin-left: -130px;
     margin-bottom: -60px;
   }
-  &:after {
-    background-image: url('/assets/images/top/circle/c4.svg');
+  &:nth-of-type(2) {
     left: 0;
     bottom: 0;
     width: 100px;
     height: 100px;
-    margin-bottom: -140px;
+    margin-bottom: -100px;
+  }
+}
+
+.line-up-content {
+  &.live .circle-content {
+    &:nth-of-type(1) {
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin-right: -130px;
+      margin-bottom: -100px;
+    }
+    &:nth-of-type(2) {
+      right: 0;
+      bottom: 0;
+      width: 130px;
+      height: 130px;
+      margin-bottom: -170px;
+    }
+  }
+  &.food .circle-content {
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    margin-left: -400px;
+    margin-bottom: -300px;
+    opacity: .6;
+  }
+  &.event .circle-content {
+    &:nth-of-type(1) {
+      right: 0;
+      bottom: 0;
+      width: 160px;
+      height: 160px;
+      margin-right: -130px;
+      margin-bottom: -190px;
+    }
+    &:nth-of-type(2) {
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin-bottom: -270px;
+    }
+  }
+}
+
+.section {
+  position: relative;
+}
+
+.time-table, .access, .faq {
+  position: relative;
+  max-width: 1000px;
+}
+
+.time-table {
+  width: 100%;
+  position: relative;
+  .circle-content {
+    &:nth-of-type(1) {
+      left: 0;
+      bottom: 0;
+      width: 220px;
+      height: 220px;
+      margin-left: -130px;
+      margin-bottom: -60px;
+    }
+    &:nth-of-type(2) {
+      left: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      margin-bottom: -140px;
+    }
   }
 }
 
 .access {
   width: 100%;
   position: relative;
-  &:before {
-    background-image: url('/assets/images/top/circle/c6.svg');
+  .circle-content {
     right: 0;
     bottom: 0;
     width: 300px;
@@ -344,6 +349,29 @@
     margin-bottom: -130px;
   }
 }
+
+.faq {
+  width: 100%;
+  position: relative;
+  .circle-content {
+    &:nth-of-type(1) {
+      left: -180px;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin-bottom: -100px;
+    }
+    &:nth-of-type(2) {
+      left: 0;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      margin-bottom: -140px;
+    }
+  }
+}
+
+/*** Circle End ***/
 
 .message-content {
   margin-top: 64px;
@@ -867,5 +895,48 @@
         max-width: 220px;
       }
     }
+  }
+  .js-translate-x {
+    transform: translateX(10px);
+    transition: all 0.4s ease-in 0s;
+    &.is-active {
+      transform: translateX(0);
+    }
+  }
+  .js-translate-y {
+    transform: translateY(10px);
+    transition: all 0.4s ease-in 0s;
+    &.is-active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.is-display-none {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.js-opacity {
+  opacity: 0;
+  transition: all 0.4s ease-in 0s;
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.js-translate-x {
+  transform: translateX(20px);
+  transition: all 0.4s ease-in-out 0s;
+  &.is-active {
+    transform: translateX(0);
+  }
+}
+
+.js-translate-y {
+  transform: translateY(20px);
+  transition: all 0.4s ease-in-out 0s;
+  &.is-active {
+    transform: translateX(0);
   }
 }
