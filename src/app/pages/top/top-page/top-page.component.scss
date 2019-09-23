@@ -98,6 +98,38 @@
     background-image: url($image-path + "/top/kira.png");
     z-index: 2;
   }
+  .balloon {
+    position: absolute;
+    top: 0;
+    left: -55vw;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 270px;
+    height: 410px;
+    z-index: 3;
+    .balloon-inner {
+      width: 100%;
+      height: 100%;
+      .balloon-content {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url($image-path + "/top/baloon.png");
+      }
+    }
+    &.is-loaded {
+      animation: 3.5s balloonRoll ease-in-out infinite;
+      .balloon-inner {
+        animation: floatH 7s ease-in-out infinite alternate;
+        .balloon-content {
+          animation: floatV 6s ease-in-out infinite alternate;
+        }
+      }
+    }
+  }
   .scroll-btn {
     appearance: none;
     outline: none;
@@ -161,6 +193,33 @@
   100% {
     opacity: 1;
     transform: translateY(15px);
+  }
+}
+
+@keyframes balloonRoll {
+  0%, 100% {
+    transform: rotateZ(10deg) scale(0.9);
+  }
+  50% {
+    transform: rotateZ(-10deg) scale(1);
+  }
+}
+
+@keyframes floatH {
+  0%, 100% {
+    transform: translate3d(2vw, 0, 0);
+  }
+  50% {
+    transform: translate3d(-2vw, 0, 0);
+  }
+}
+
+@keyframes floatV {
+  0%, 100% {
+    transform: translate3d(0, 5vh, 0);
+  }
+  50% {
+    transform: translate3d(0, -3vh, 0);
   }
 }
 
@@ -702,6 +761,10 @@
       bottom: auto;
       top: calc(75vh - 150px);
     }
+    .balloon {
+      width: 250px;
+      height: 280px;
+    }
   }
 
   .section {
@@ -862,6 +925,10 @@
       height: 100%;
       background-size: auto 75vh;
       background-position: center 1vh;
+    }
+    .balloon {
+      width: 115px;
+      height: 250px;
     }
     .scroll-btn {
       left: 0;

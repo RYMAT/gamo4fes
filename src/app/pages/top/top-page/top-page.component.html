@@ -5,6 +5,11 @@
     <div class="cloud cloud-1 bg-image"></div>
     <div class="cloud cloud-2 bg-image"></div>
     <div class="kira"></div>
+    <div class="balloon" [class.is-loaded]="isLoaded">
+      <div class="balloon-inner">
+        <div class="balloon-content"></div>
+      </div>
+    </div>
     <button (click)="onMoveGamoyon()"
             scrollStyle
             [offsetHeight]="windowHeight/2"
@@ -104,18 +109,18 @@
           <div class="image-content item-event bg-image"></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content js-opacity js-translate-y"
-           scrollStyle [offsetHeight]="windowHeight/3">
-        <div class="hidden-xs"></div>
-        <div class="description-text">
-          café de GAMOYON では毎年ライブと並行してワークショップが開催されています。<br>
-          がもよんフェスのゆるきゃらギャモッシーを作ったり、特別なアクセサリーや小物を作って思い出を形に残しませんか？
-        </div>
-        <div class="btn-wrapper">
-          <app-button (clicked)="onMovePage(routes.EVENT.path)"
-          ></app-button>
+             scrollStyle [offsetHeight]="windowHeight/3">
+          <div class="hidden-xs"></div>
+          <div class="description-text">
+            café de GAMOYON では毎年ライブと並行してワークショップが開催されています。<br>
+            がもよんフェスのゆるきゃらギャモッシーを作ったり、特別なアクセサリーや小物を作って思い出を形に残しませんか？
+          </div>
+          <div class="btn-wrapper">
+            <app-button (clicked)="onMovePage(routes.EVENT.path)"
+            ></app-button>
+          </div>
         </div>
       </div>
-    </div>
     </section>
 
     <!--Time Table -->
