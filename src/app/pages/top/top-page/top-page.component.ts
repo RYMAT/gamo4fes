@@ -7,15 +7,23 @@ import { IRoutePaths } from '../../../core/constants/route.constant';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/service/state/state.service';
 import * as imageLoaded from 'imagesloaded';
-import * as _ from 'lodash';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 declare var $;
 
 @Component({
   selector: 'app-top-page',
   templateUrl: './top-page.component.html',
-  styleUrls: ['./top-page.component.scss']
+  styleUrls: ['./top-page.component.scss'],
+  animations: [
+    trigger('showSupporters', [
+      state('false', style({ height: '0', opacity: 0 })),
+      state('void', style({ height: '0', opacity: 0 })),
+      state('true', style({ height: '*', opacity: 1 })),
+      transition('* => true', animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
+    ]),
+  ],
 })
 export class TopPageComponent implements OnInit {
   readonly routes: IRoutePaths = RouteConstant;
@@ -23,9 +31,11 @@ export class TopPageComponent implements OnInit {
   @ViewChild('messageModal', { static: true }) modalTemplate: TemplateRef<any>;
 
   supports: Support[];
+  gamoyonSupports: Support[];
   isLoaded: boolean;
   windowHeight: number;
   modalRef: BsModalRef;
+  isShowGamoyonSupports: boolean = false;
 
   constructor(private jsonConvertService: JsonConvertService,
               private titleService: Title,
@@ -40,6 +50,7 @@ export class TopPageComponent implements OnInit {
 
   ngOnInit() {
     this.fetchSupports();
+    this.fetchGamoyonSupports();
     const { TOP } = RouteConstant;
     const title: string = TOP.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
@@ -59,6 +70,10 @@ export class TopPageComponent implements OnInit {
 
   private fetchSupports() {
     this.jsonConvertService.fetchSupports().subscribe(val => this.supports = val);
+  }
+
+  private fetchGamoyonSupports() {
+    this.jsonConvertService.fetchGamoyonSupports().subscribe(val => this.gamoyonSupports = val);
   }
 
   getSafeUrl(url: string): SafeUrl {

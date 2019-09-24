@@ -465,6 +465,39 @@
             </ng-template>
           </li>
         </ul>
+        <div class="gamoyon-supporter-wrapper" [class.is-show]="isShowGamoyonSupports"
+             *ngIf="!!gamoyonSupports && !!gamoyonSupports.length">
+          <div class="btn-toggle-content">
+            <button type="button" class="btn btn-link"
+                    *ngIf="!isShowGamoyonSupports"
+                    (click)="isShowGamoyonSupports = true">
+              その他のご協賛 <i class="icomoon-angle-down-solid"></i>
+            </button>
+            <span *ngIf="isShowGamoyonSupports" class="heading-text">その他のご協賛</span>
+          </div>
+          <ul class="gamoyon-supports-list" *ngIf="isShowGamoyonSupports">
+            <li class="list-item" *ngFor="let support of gamoyonSupports"
+                [@showSupporters]="isShowGamoyonSupports.toString()"
+                [tooltip]="support.description? support.description : null"
+                placement="top">
+              <ng-container *ngIf="!!support.web_url">
+                <a [href]="support.web_url" target="_blank">
+                  <figure class="shop-image"
+                          [style.background-image]="'url(assets/images/gamoyon_supports/shop_'+support.id+'.jpg)'"
+                  ></figure>
+                  <span class="shop-name">{{support.name}}</span>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="!support.web_url">
+                <figure class="shop-image"
+                        [style.background-image]="'url(assets/images/gamoyon_supports/shop_'+support.id+'.jpg)'"
+                ></figure>
+                <span class="shop-name">{{support.name}}</span>
+              </ng-container>
+            </li>
+          </ul>
+
+        </div>
       </div>
     </section>
 

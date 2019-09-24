@@ -662,8 +662,64 @@
   }
 }
 
-// SNSのリンク
+.gamoyon-supporter-wrapper {
+  &.is-show {
+    background-color: #fafafa;
+    border-radius: 4px;
+  }
+  .btn-toggle-content {
+    padding: 16px 0 24px;
+    text-align: center;
+    .btn {
+      outline: none;
+      text-decoration: none;
+      i {
+        margin-left: 4px;
+      }
+    }
+    .heading-text {
+      display: block;
+      font-family: "mamelon", sans-serif;
+      color: #00A73D;
+      font-size: 16px;
+    }
+  }
+  .gamoyon-supports-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    .list-item {
+      width: 155px;
+      position: relative;
+      display: inline-block;
+      margin: 0 4px 8px;
+      > a {
+        width: 100%;
+        display: inline-block;
+      }
+      .shop-image {
+        display: inline-block;
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+      }
+      .shop-name {
+        font-size: 12px;
+        letter-spacing: .01em;
+      }
+    }
+  }
+}
 
+// SNSのリンク
 .sns-links {
   display: flex;
   justify-content: center;
@@ -954,6 +1010,24 @@
       height: 300px;
     }
   }
+
+  .gamoyon-supporter-wrapper {
+    .gamoyon-supports-list {
+      .list-item {
+        width: 135px;
+        margin: 0 8px 10px;
+        .shop-image {
+          height: 90px;
+        }
+        .shop-name {
+          font-size: 11px;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+
+
 }
 
 @media screen and (max-width: $screen-sm) {
@@ -1121,3 +1195,20 @@
   }
 }
 
+/**
+* Tooltip
+*/
+:host ::ng-deep {
+  .tooltip-inner {
+    background-color: #029352;
+    color: #fff;
+  }
+  .tooltip.top .tooltip-arrow:before,
+  .tooltip.top .tooltip-arrow {
+    border-top-color: #029352;
+  }
+  .tooltip.bottom .tooltip-arrow:before,
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #029352;
+  }
+}

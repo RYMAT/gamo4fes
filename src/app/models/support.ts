@@ -3,4 +3,6 @@ export interface Support {
   name: string;
   web_url: string;
   image_path: string;
+  /** がもよんの協賛店舗用 */
+  description: string;
 }

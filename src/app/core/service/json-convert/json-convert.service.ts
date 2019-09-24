@@ -18,6 +18,11 @@ export class JsonConvertService {
     return this.http.get('/assets/jsons/supports.json') as Observable<Support[]>;
   }
 
+  // 協賛
+  fetchGamoyonSupports(): Observable<Support[]> {
+    return this.http.get('/assets/jsons/gamoyon_supports.json') as Observable<Support[]>;
+  }
+
   // アーティスト
   fetchArtists(): Observable<Artist[]> {
     return this.http.get('/assets/jsons/artists.json') as Observable<Artist[]>;
