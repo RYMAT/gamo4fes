@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
@@ -43,6 +43,7 @@ export class TopPageComponent implements OnInit {
               private state: StateService,
               private ngZone: NgZone,
               private el: ElementRef,
+              private renderer: Renderer2,
               private modalService: BsModalService,
               private router: Router) {
   }
@@ -63,6 +64,10 @@ export class TopPageComponent implements OnInit {
     imageLoaded(els, { background: true }).on('done', () => {
       this.state.isLoaded.next(true);
       this.isLoaded = true;
+      setTimeout(() => {
+        const topPageEl = this.el.nativeElement.querySelector('.top-page-content');
+        this.renderer.addClass(topPageEl, 'moving');
+      }, 3000);
     });
     this.windowHeight = window.innerHeight;
   }
