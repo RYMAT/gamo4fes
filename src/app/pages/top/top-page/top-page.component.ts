@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, OnInit, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { Support } from '../../../models/support';
 import { DomSanitizer, SafeUrl, Title } from '@angular/platform-browser';
@@ -43,7 +43,6 @@ export class TopPageComponent implements OnInit {
               private state: StateService,
               private ngZone: NgZone,
               private el: ElementRef,
-              private renderer: Renderer2,
               private modalService: BsModalService,
               private router: Router) {
   }
@@ -102,13 +101,9 @@ export class TopPageComponent implements OnInit {
 
   openMessageModal() {
     this.modalRef = this.modalService.show(this.modalTemplate, { class: 'modal-lg' });
-    const body = document.body;
-    this.renderer.addClass(body, 'is-modal');
   }
 
   onModalClose() {
     this.modalRef.hide();
-    const body = document.body;
-    this.renderer.removeClass(body, 'is-modal');
   }
 }

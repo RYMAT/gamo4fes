@@ -37,7 +37,7 @@
   }
 }
 
-:host-context(.is-modal) {
+:host-context(.modal-open) {
   .ss-scroll-top-button-wrapper {
     display: none;
   }
