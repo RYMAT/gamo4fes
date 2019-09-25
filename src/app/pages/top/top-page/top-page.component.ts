@@ -68,6 +68,11 @@ export class TopPageComponent implements OnInit {
     this.windowHeight = window.innerHeight;
   }
 
+  // タッチデバイス判定
+  get isTouchDevice() {
+    return (window.ontouchstart === null);
+  }
+
   private fetchSupports() {
     this.jsonConvertService.fetchSupports().subscribe(val => this.supports = val);
   }

@@ -478,10 +478,10 @@
           <ul class="gamoyon-supports-list" *ngIf="isShowGamoyonSupports">
             <li class="list-item" *ngFor="let support of gamoyonSupports"
                 [@showSupporters]="isShowGamoyonSupports.toString()"
-                [tooltip]="support.description? support.description : null"
+                [tooltip]="(support.description && !isTouchDevice) ? support.description : null"
                 placement="top">
               <ng-container *ngIf="!!support.web_url">
-                <a [href]="support.web_url" target="_blank">
+                <a [href]="getSafeUrl(support.web_url)" target="_blank">
                   <figure class="shop-image"
                           [style.background-image]="'url(assets/images/gamoyon_supports/shop_'+support.id+'.jpg)'"
                   ></figure>
