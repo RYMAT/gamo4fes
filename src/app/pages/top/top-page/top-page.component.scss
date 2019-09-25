@@ -888,9 +888,26 @@
   }
 }
 
+@media screen and (min-width: $screen-sm) {
+  .description-content {
+    justify-content: flex-end;
+    .description-text {
+      padding-top: 24px;
+      min-height: 180px;
+    }
+  }
+}
+
 @media screen and (min-width: $screen-md) {
   .main-image .kira {
     animation: blink 800ms ease-in-out 0s infinite alternate;
+  }
+  .description-content {
+    justify-content: flex-end;
+    .description-text {
+      padding-top: 24px;
+      min-height: 220px;
+    }
   }
 }
 
@@ -1057,8 +1074,6 @@
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: $screen-sm) {
