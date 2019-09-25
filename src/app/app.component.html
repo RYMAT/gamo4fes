@@ -1,24 +1,39 @@
-<div class="app-wrapper">
-  <app-header></app-header>
-  <div class="app-content">
-    <router-outlet (activate)="onActivate()"></router-outlet>
+<ng-container *ngIf="!isHidden">
+  <div class="app-wrapper">
+    <app-header></app-header>
+    <div class="app-content">
+      <router-outlet (activate)="onActivate()"></router-outlet>
+    </div>
+    <app-footer></app-footer>
+    <app-scroll-top-button></app-scroll-top-button>
   </div>
-  <app-footer></app-footer>
-  <app-scroll-top-button></app-scroll-top-button>
-</div>
-<div class="splash-base" *ngIf="(state !== 'show') || splashState === 'change'">
-  <div class="loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <div class="splash-base" *ngIf="(state !== 'show') || splashState === 'change'">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
-</div>
-<div class="splash-wrapper" [@splash]="splashState" (@splash.done)="onDoneSplash($event)">
-  <div class="splash"></div>
-  <div class="splash splash-2"></div>
-  <div class="splash splash-3"></div>
-  <div class="splash splash-4"></div>
-</div>
+  <div class="splash-wrapper" [@splash]="splashState" (@splash.done)="onDoneSplash($event)">
+    <div class="splash"></div>
+    <div class="splash splash-2"></div>
+    <div class="splash splash-3"></div>
+    <div class="splash splash-4"></div>
+  </div>
+</ng-container>
+<!--公開前-->
+<ng-container *ngIf="isHidden">
+  <div class="splash before-release-view">
+    <div class="inner-content">
+      <div class="logo-content"></div>
+      <div class="heading text-center">Thank you for coming :)</div>
+      <p class="description-text text-center">
+        この「がもよんフェス2019 official Site」は公開に向けて準備中です。<br>
+        公開までしばらくお待ちください。
+      </p>
+    </div>
+  </div>
+</ng-container>

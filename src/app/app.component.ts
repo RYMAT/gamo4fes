@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { GaService } from './core/service/ga/ga.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  isHidden: boolean;
   state: string;
   splashState: string = '';
   subscription: Subscription = new Subscription();
@@ -33,6 +35,12 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private stateService: StateService,
               private router: Router,
               private gaService: GaService) {
+    // TODO: 公開の際に削除する
+    const productionOrigin: string = 'gamo4fes.com';
+    const host: string = location.host;
+    if (environment.production && host.indexOf(productionOrigin) !== -1) {
+      this.isHidden = true;
+    }
     this.subscription.add(this.stateService.isLoaded.subscribe(v => this.onLoad(v)));
   }
 
