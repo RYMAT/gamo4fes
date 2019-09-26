@@ -1,6 +1,6 @@
-<div class="detail-page-content">
+<div class="detail-page-content" id="parallax">
   <div class="main-image bg-image">
-    <div class="title-text">Food</div>
+    <div class="title-text parallax-el" data-speed-y="-20" data-offset="0">Food</div>
   </div>
   <section class="main-content">
     <h2 class="heading-text">アーティスト応援メニュー参加店</h2>
@@ -18,6 +18,7 @@
       </div>
     </div>
   </section>
+  <app-footer class="app-footer"></app-footer>
 </div>
 
 <!--ModalのTemplate-->
@@ -99,5 +100,5 @@
       </div>
     </div>
   </div>
-<!--  <pre>{{selectedShop$.value | json}}</pre>-->
+  <!--  <pre>{{selectedShop$.value | json}}</pre>-->
 </ng-template>

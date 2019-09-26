@@ -5,6 +5,7 @@ import { topRouting } from './top-page-routing';
 import { ButtonModule } from '../../shared/button/button.module';
 import { ScrollStyleModule } from '../../shared/scroll-style/scroll-style.module';
 import { TooltipModule } from 'ngx-bootstrap';
+import { FooterModule } from '../../shared/footer/footer.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { TooltipModule } from 'ngx-bootstrap';
     ButtonModule,
     ScrollStyleModule,
     TooltipModule,
+    FooterModule,
   ],
   declarations: [TopPageComponent],
 })

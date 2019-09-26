@@ -7,6 +7,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
+declare var luxy;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -77,6 +79,13 @@ export class AppComponent implements OnInit, OnDestroy {
       this.setState('');
       return;
     }
+    setTimeout(() => {
+      luxy.init({
+        wrapper: '#parallax',
+        targets: '.parallax-el',
+        wrapperSpeed: 0.2
+      });
+    });
     this.setState('show');
   }
 

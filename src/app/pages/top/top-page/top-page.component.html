@@ -1,11 +1,14 @@
-<div class="top-page-content" [class.is-loaded]="isLoaded">
+<div class="top-page-content" id="parallax" [class.is-loaded]="isLoaded">
   <div class="main-image">
-    <div class="bg-content town bg-image"></div>
+    <div class="bg-content town bg-image parallax-el"
+         data-speed-y="-15" data-offset="0"
+    ></div>
     <div class="bg-content gyammossy bg-image"></div>
     <div class="cloud cloud-1 bg-image"></div>
     <div class="cloud cloud-2 bg-image"></div>
     <div class="kira"></div>
-    <div class="balloon" [class.is-loaded]="isLoaded">
+    <div class="balloon parallax-el" [class.is-loaded]="isLoaded"
+         data-speed-y="25" data-offset="-10">
       <div class="balloon-inner">
         <div class="balloon-content"></div>
       </div>
@@ -22,8 +25,8 @@
   <div class="main-content container">
 
     <section class="section what-gamoyon js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
-      <div class="circle-content c1"></div>
-      <div class="circle-content c4"></div>
+      <div class="circle-content c1 parallax-el" data-speed-y="-25" data-offset="0"></div>
+      <div class="circle-content c4 parallax-el" data-speed-y="-30" data-offset="100"></div>
       <h2 class="heading-content" #gamoyon>
         <span class="heading-text">What’s GAMO4Fes</span>
         <span class="heading-text-jp">がもよんフェスとは？</span>
@@ -46,17 +49,19 @@
     </section>
     <!--Live-->
     <section class="section row line-up-content live">
-      <div class="circle-content c2"></div>
-      <div class="circle-content c3"></div>
+      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="60"></div>
+      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="30"></div>
       <h2 class="heading-content col-md-12">
         <span class="heading-text">Live</span>
         <span class="heading-text-jp">ライブ</span>
       </h2>
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
-          <div class="image-content item-live bg-image"></div>
+          <div class="image-content item-live bg-image parallax-el"
+               data-speed-y="-10" data-offset="280"
+          ></div>
         </div>
-        <div class="col-md-6 col-sm-6 description-content js-opacity js-translate-y" scrollStyle
+        <div class="col-md-6 col-sm-6 description-content js-opacity" scrollStyle
              [offsetHeight]="windowHeight/3">
           <div class="hidden-xs"></div>
           <div class="description-text">
@@ -74,16 +79,18 @@
 
     <!--Food-->
     <section class="section row line-up-content food">
-      <div class="circle-content c7"></div>
+      <div class="circle-content c7 parallax-el" data-speed-y="-5" data-offset="150"></div>
       <h2 class="heading-content col-md-12 is-left">
         <span class="heading-text">Food</span>
         <span class="heading-text-jp">フード</span>
       </h2>
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col visible-xs-block visible-sm-block text-right">
-          <div class="image-content item-food"></div>
+          <div class="image-content item-food parallax-el"
+               data-speed-y="-10" data-offset="400"
+          ></div>
         </div>
-        <div class="col-md-6 col-sm-6 description-content is-left js-opacity js-translate-y" scrollStyle
+        <div class="col-md-6 col-sm-6 description-content is-left js-opacity" scrollStyle
              [offsetHeight]="windowHeight/3">
           <div class="hidden-xs hidden-sm"></div>
           <div class="description-text">
@@ -97,24 +104,28 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-6 image-col hidden-xs hidden-sm">
-          <div class="image-content item-food"></div>
+          <div class="image-content item-food parallax-el"
+               data-speed-y="-10" data-offset="400"
+          ></div>
         </div>
       </div>
     </section>
 
     <!--event-->
     <section class="section row line-up-content event">
-      <div class="circle-content c1"></div>
-      <div class="circle-content c3"></div>
+      <div class="circle-content c1 parallax-el" data-speed-y="-5" data-offset="160"></div>
+      <div class="circle-content c3 parallax-el" data-speed-y="-3" data-offset="80"></div>
       <h2 class="heading-content col-md-12">
         <span class="heading-text">Event</span>
         <span class="heading-text-jp">イベント</span>
       </h2>
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
-          <div class="image-content item-event bg-image"></div>
+          <div class="image-content item-event bg-image parallax-el"
+               data-speed-y="-10" data-offset="520"
+          ></div>
         </div>
-        <div class="col-md-6 col-sm-6 description-content js-opacity js-translate-y"
+        <div class="col-md-6 col-sm-6 description-content js-opacity"
              scrollStyle [offsetHeight]="windowHeight/3">
           <div class="hidden-xs"></div>
           <div class="description-text">
@@ -131,8 +142,8 @@
 
     <!--Time Table -->
     <div class="time-table">
-      <div class="circle-content c1"></div>
-      <div class="circle-content c4"></div>
+      <div class="circle-content c1 parallax-el" data-speed-y="-5" data-offset="400"></div>
+      <div class="circle-content c4 parallax-el" data-speed-y="-5" data-offset="400"></div>
       <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">Time Table</span>
@@ -147,7 +158,7 @@
     </div>
     <!--Access-->
     <div class="access">
-      <div class="circle-content c6"></div>
+      <div class="circle-content c6 parallax-el" data-speed-y="-5" data-offset="400"></div>
       <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">Access</span>
@@ -311,8 +322,8 @@
 
     <!--FAQ-->
     <div class="faq">
-      <div class="circle-content c2"></div>
-      <div class="circle-content c3"></div>
+      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="700"></div>
+      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="700"></div>
       <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">FAQ</span>
@@ -546,8 +557,8 @@
       </a>
     </div>
   </div>
+  <app-footer class="app-footer"></app-footer>
 </div>
-
 <ng-template #messageModal>
   <div class="modal-inner">
     <div class="heading-content text-right">

@@ -32,7 +32,8 @@
               "src/styles/styles.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/luxy.js/dist/js/luxy.min.js"
             ]
           },
           "configurations": {
