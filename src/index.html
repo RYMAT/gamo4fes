@@ -10,6 +10,8 @@
   <meta property="og:type" content="website"/>
   <meta property="og:description"
         content="【音と食のハシゴ】をテーマに通称“がもよん”と愛され続けている、大阪の蒲生四丁目で聴いて観て食べて飲んで遊べる地域密着型の音楽フェス！"/>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@gamoyon_fes">
 
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/favicons/favicon.ico">
   <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicons/favicon.ico">
@@ -227,5 +229,24 @@
     </div>
   </div>
 </app-root>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBfso4XZVAzJ8mW2E0eb761DeGz_YLo0HQ",
+        authDomain: "gamo4fes.firebaseapp.com",
+        databaseURL: "https://gamo4fes.firebaseio.com",
+        projectId: "gamo4fes",
+        storageBucket: "",
+        messagingSenderId: "308794688351",
+        appId: "1:308794688351:web:7a48e3d188ba71849dacea",
+        measurementId: "G-D4EB8QX4SY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
 </body>
 </html>
