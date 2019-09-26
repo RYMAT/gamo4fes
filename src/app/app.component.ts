@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { animate, AnimationEvent, query, stagger, style, transition, trigger } from '@angular/animations';
 import { StateService } from './core/service/state/state.service';
 import { Subscription } from 'rxjs';
@@ -34,12 +34,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private stateService: StateService,
               private router: Router,
+              private renderer: Renderer2,
               private gaService: GaService) {
     // TODO: 公開の際に削除する
     const productionOrigin: string = 'gamo4fes.com';
     const host: string = location.host;
     if (environment.production && host.indexOf(productionOrigin) !== -1) {
       this.isHidden = true;
+      const html = document.getElementsByTagName('html');
+      this.renderer.setStyle(html[0], 'overflow-y', 'hidden');
     }
     this.subscription.add(this.stateService.isLoaded.subscribe(v => this.onLoad(v)));
   }
