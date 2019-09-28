@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { GaService } from './core/service/ga/ga.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { environment } from '../environments/environment';
 
 declare var luxy;
 
@@ -29,7 +28,6 @@ declare var luxy;
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  isHidden: boolean;
   state: string;
   splashState: string = '';
   subscription: Subscription = new Subscription();
@@ -38,14 +36,6 @@ export class AppComponent implements OnInit, OnDestroy {
               private router: Router,
               private renderer: Renderer2,
               private gaService: GaService) {
-    // TODO: 公開の際に削除する
-    const productionOrigin: string = 'gamo4fes.com';
-    const host: string = location.host;
-    if (environment.production && host.indexOf(productionOrigin) !== -1) {
-      this.isHidden = true;
-      const html = document.getElementsByTagName('html');
-      this.renderer.setStyle(html[0], 'overflow-y', 'hidden');
-    }
     this.subscription.add(this.stateService.isLoaded.subscribe(v => this.onLoad(v)));
   }
 
