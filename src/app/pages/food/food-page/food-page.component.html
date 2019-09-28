@@ -8,7 +8,7 @@
 
       <div class="card-content">
         <ng-container *ngFor="let shop of shops">
-          <article class="food" (click)="onShowFoodModal(shop)">
+          <article matRipple class="food" (click)="onShowFoodModal(shop)">
             <div class="food-image bg-image" [style.background-image]="'url(/'+ shop.food_image_path +')'"></div>
             <span class="food-name">{{shop.name}}</span>
             <pre>{{shop.food_image_path}}</pre>

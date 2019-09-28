@@ -67,8 +67,8 @@
     </section>
     <!--Live-->
     <section class="section row line-up-content live">
-      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="60"></div>
-      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="30"></div>
+      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="80"></div>
+      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="50"></div>
       <h2 class="heading-content col-md-12">
         <span class="heading-text">Live</span>
         <span class="heading-text-jp">ライブ</span>
@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
           <div class="image-content item-live bg-image parallax-el"
-               data-speed-y="-10" data-offset="280"
+               data-speed-y="-10" data-offset="310"
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content js-opacity" scrollStyle
@@ -105,7 +105,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col visible-xs-block visible-sm-block text-right">
           <div class="image-content item-food parallax-el"
-               data-speed-y="-10" data-offset="400"
+               data-speed-y="-10" data-offset="450"
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content is-left js-opacity" scrollStyle
@@ -123,7 +123,7 @@
         </div>
         <div class="col-md-6 col-sm-6 image-col hidden-xs hidden-sm">
           <div class="image-content item-food parallax-el"
-               data-speed-y="-10" data-offset="400"
+               data-speed-y="-10" data-offset="450"
           ></div>
         </div>
       </div>
@@ -140,7 +140,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-6 image-col">
           <div class="image-content item-event bg-image parallax-el"
-               data-speed-y="-10" data-offset="520"
+               data-speed-y="-10" data-offset="580"
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content js-opacity"
@@ -176,7 +176,7 @@
     </div>
     <!--Access-->
     <div class="access">
-      <div class="circle-content c6 parallax-el" data-speed-y="-5" data-offset="400"></div>
+      <div class="circle-content c6 parallax-el" data-speed-y="-5" data-offset="430"></div>
       <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">Access</span>
@@ -340,8 +340,8 @@
 
     <!--FAQ-->
     <div class="faq">
-      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="700"></div>
-      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="700"></div>
+      <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="730"></div>
+      <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="730"></div>
       <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">FAQ</span>
@@ -486,7 +486,7 @@
         <ul class="support-list">
           <li *ngFor="let support of supports"
               class="list-item">
-            <a *ngIf="support.web_url; else elseTemplate" [href]="getSafeUrl(support.web_url)" target="_blank">
+            <a *ngIf="support.web_url; else elseTemplate" matRipple [href]="getSafeUrl(support.web_url)" target="_blank">
               <img class="logo-image" draggable="false" [src]="support.image_path" [alt]="support.name">
             </a>
             <ng-template #elseTemplate>
@@ -510,7 +510,7 @@
                 [tooltip]="(support.description && !isTouchDevice) ? support.description : null"
                 placement="top">
               <ng-container *ngIf="!!support.web_url">
-                <a [href]="getSafeUrl(support.web_url)" target="_blank">
+                <a matRipple [href]="getSafeUrl(support.web_url)" target="_blank">
                   <figure class="shop-image"
                           [style.background-image]="'url(assets/images/gamoyon_supports/shop_'+support.id+'.jpg)'"
                   ></figure>
@@ -532,7 +532,8 @@
 
     <div class="sns-links js-opacity" scrollStyle [offsetHeight]="windowHeight/3">
       <!--Insta-->
-      <a class="sns-content-link insta"
+      <a matRipple
+         class="sns-content-link insta"
          href="https://www.instagram.com/gamoyon_fes" target="_blank" title="instagram">
         <span class="link-inner">
         <span class="icon-content">
@@ -545,7 +546,8 @@
         </span>
       </a>
       <!--Twitter-->
-      <a class="sns-content-link twitter" href="https://twitter.com/gamoyon_fes" target="_blank" title="twitter">
+      <a matRipple
+         class="sns-content-link twitter" href="https://twitter.com/gamoyon_fes" target="_blank" title="twitter">
         <span class="link-inner">
         <span class="icon-content">
           <i class="icomoon-twitter-brands icon"></i>
@@ -557,7 +559,8 @@
         </span>
       </a>
       <!--fb-->
-      <a class="sns-content-link fb" href="https://www.facebook.com/gamoyon.fes" target="_blank" title="facebook">
+      <a matRipple
+         class="sns-content-link fb" href="https://www.facebook.com/gamoyon.fes" target="_blank" title="facebook">
         <span class="link-inner">
         <span class="icon-content">
           <i class="icomoon-facebook-brands icon"></i>
@@ -569,7 +572,8 @@
         </span>
       </a>
       <!--Youtube-->
-      <a class="sns-content-link youtube" href="https://www.youtube.com/channel/UCg5b4A14CVzpk8wrhj0d0fA"
+      <a matRipple
+         class="sns-content-link youtube" href="https://www.youtube.com/channel/UCg5b4A14CVzpk8wrhj0d0fA"
          title="youtube" target="_blank">
         youtube
       </a>

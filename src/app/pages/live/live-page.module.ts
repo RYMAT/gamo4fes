@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LivePageComponent } from './live-page/live-page.component';
 import { liveRouting } from './live-page-routing';
 import { FooterModule } from '../../shared/footer/footer.module';
+import { MatRippleModule } from '@angular/material';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { FooterModule } from '../../shared/footer/footer.module';
     CommonModule,
     liveRouting,
     FooterModule,
+    MatRippleModule,
   ],
   declarations: [LivePageComponent],
 })

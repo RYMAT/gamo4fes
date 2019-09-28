@@ -10,6 +10,7 @@ import { ModalModule, TooltipModule } from 'ngx-bootstrap';
 import { ScrollTopButtonModule } from './shared/scroll-top-button/scroll-top-button.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { environment } from '../environments/environment';
     ScrollTopButtonModule,
     TooltipModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
   ],
   declarations: [
     AppComponent,

@@ -7,7 +7,7 @@
     <div class="inner-content container">
       <!--タイムテーブル-->
       <div class="time-table-content">
-        <a class="image-wrapper" (click)="onShowTimeTablePdf()">
+        <a matRipple class="image-wrapper" (click)="onShowTimeTablePdf()">
           <img class="time-table-image" draggable="false" src="assets/images/time-table.jpg" alt="タイムテーブル">
         </a>
       </div>
@@ -15,7 +15,7 @@
       <!--アーティスト-->
       <div class="card-content">
         <ng-container *ngFor="let artist of artists">
-          <article class="artist" (click)="onShowArtistModal(artist)">
+          <article matRipple class="artist" (click)="onShowArtistModal(artist)">
             <div class="artist-image bg-image" [style.background-image]="'url(/'+artist.image_path+')'"></div>
             <span class="artist-name">{{artist.name}}</span>
           </article>
