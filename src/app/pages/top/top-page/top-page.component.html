@@ -31,14 +31,33 @@
         <span class="heading-text">What’s GAMO4Fes</span>
         <span class="heading-text-jp">がもよんフェスとは？</span>
       </h2>
-      <p class="message-content">
-        美味しいご飯と美味しいお酒最高の音楽で僕らみんな友達さ（♪がもよんフェスのテーマソング）<br>
-        【音と食のハシゴ】をコンセプトに掲げた聴いて、観て、食べて、飲んで、遊べるがもよんフェス人と人が繋がるミュージックフェスティバル。<br>
-        がもよんフェスの舞台は通称“がもよん”と愛され続けている、蒲生四丁目。古民家が多く残された下町ならではの風情のある町並み。この街で “生の音楽”
-        に触れるきっかけを作れればと様々な企業様、店舗様の協力を得て地域の活性化を目指し、2015年に立ち上がりました。ひとりでも多くの人に音楽を愛してもらえるように、この街から音楽の魅力を発信し続けていきたいと思います。この日、全国から音楽好きが蒲生四丁目に集まります。<br>
-        がもよんフェスを通して、笑顔と元気いっぱいなこの街を全国各地の人達に知ってもらいたい。<br>
-        美味しいご飯と、最高の音楽が溢れるこの街で特別な1日を過ごしましょう。 お腹も心も腹ペコで遊びに来てください♪
-      </p>
+      <div class="message-content">
+        <p>
+          美味しいご飯と美味しいお酒最高の音楽で僕らみんな友達さ<br>
+          （♪がもよんフェスのテーマソング）<br>
+        </p>
+        <p>
+          【音と食のハシゴ】をコンセプトに掲げた<br>
+          聴いて、観て、食べて、飲んで、遊べるがもよんフェス<br>
+          人と人が繋がるミュージックフェスティバル。
+        </p>
+        <p>
+          がもよんフェスの舞台は通称“がもよん”と愛され続けている、蒲生四丁目。<br>
+          古民家が多く残された下町ならではの風情のある町並み。<br>
+          この街で “生の音楽” に触れるきっかけを作れればと <br>
+          様々な企業様、店舗様の協力を得て地域の活性化を目指し、2015年に立ち上がりました。
+        </p>
+        <p>
+          ひとりでも多くの人に音楽を愛してもらえるように、<br>
+          この街から音楽の魅力を発信し続けていきたいと思います。
+        </p>
+        <p>
+          この日、全国から音楽好きが蒲生四丁目に集まります。<br>
+          がもよんフェスを通して、笑顔と元気いっぱいなこの街を全国各地の人達に知ってもらいたい。<br>
+          美味しいご飯と、最高の音楽が溢れるこの街で特別な1日を過ごしましょう。<br>
+          お腹も心も腹ペコで遊びに来てください♪
+        </p>
+      </div>
       <div class="btn-wrapper">
         <app-button
           class="btn-message"
@@ -482,9 +501,9 @@
             <button type="button" class="btn btn-link"
                     *ngIf="!isShowGamoyonSupports"
                     (click)="isShowGamoyonSupports = true">
-              その他のご協賛 <i class="icomoon-angle-down-solid"></i>
+              ご協賛頂いている店舗様 <i class="icomoon-angle-down-solid"></i>
             </button>
-            <span *ngIf="isShowGamoyonSupports" class="heading-text">その他のご協賛</span>
+            <span *ngIf="isShowGamoyonSupports" class="heading-text">ご協賛頂いている店舗様</span>
           </div>
           <ul class="gamoyon-supports-list" *ngIf="isShowGamoyonSupports">
             <li class="list-item" *ngFor="let support of gamoyonSupports"
