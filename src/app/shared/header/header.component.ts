@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, Renderer2 } from '@angular/core';
 import { NavigationEnd, Route, Router } from '@angular/router';
 import { RouteConstant } from '../../core/constants';
 import { Subscription } from 'rxjs';
@@ -20,7 +20,7 @@ import { animate, AnimationEvent, query, stagger, state, style, transition, trig
         query('.nav-list-menu', [
           style({ opacity: 0, transform: 'translateX(200px)' }),
           stagger(100, [
-            animate('600ms 50ms cubic-bezier(0.6, 0.15, 0.3, 0.8)',
+            animate('400ms 50ms cubic-bezier(0.6, 0.15, 0.3, 0.8)',
               style({ opacity: 1, transform: 'translateX(0)' }))
           ])
         ])
@@ -39,7 +39,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input() isActiveHamburger: boolean = false;
   @Output() isActiveHamburgerChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private renderer: Renderer2) {
     const { LIVE, FOOD, EVENT, ACCESS, GOODS } = RouteConstant;
     const routes: Route[] = [LIVE, FOOD, EVENT, ACCESS, GOODS] as Route[];
     this.navigation.push(...routes);
@@ -61,6 +62,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onChangeHamburgerState() {
     this.isActiveHamburger = !this.isActiveHamburger;
     this.isActiveHamburgerChange.emit(this.isActiveHamburger);
+    const body = document.body;
+    if (this.isActiveHamburger) {
+      this.renderer.addClass(body, 'modal-open');
+      return;
+    }
+    this.renderer.removeClass(body, 'modal-open');
   }
 
   onMovePage(path: string) {
