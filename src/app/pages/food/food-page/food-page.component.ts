@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 import { JsonConvertService } from '../../../core/service/json-convert/json-convert.service';
 import { DomSanitizer, Title } from '@angular/platform-browser';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
 import { StateService } from '../../../core/service/state/state.service';
 import { AppConstant, RouteConstant } from '../../../core/constants';
 import * as imageLoaded from 'imagesloaded';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-food-page',
@@ -27,6 +28,8 @@ export class FoodPageComponent implements OnInit, OnDestroy {
               private sanitizer: DomSanitizer,
               private state: StateService,
               private el: ElementRef,
+              private renderer: Renderer2,
+              @Inject(DOCUMENT) private document: Document,
               private modalService: BsModalService) {
   }
 
@@ -46,6 +49,7 @@ export class FoodPageComponent implements OnInit, OnDestroy {
     // 画像の読み込みを監視
     imageLoaded(els, { background: true }).on('done', () => {
       this.state.isLoaded.next(true);
+      this.document.body.scrollTop = 0;
     });
   }
 

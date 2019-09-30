@@ -25,6 +25,7 @@ export class ScrollTopButtonComponent implements OnInit, OnDestroy, OnChanges {
 
   /** ボタンを表示するスクロール判定値 */
   @Input() activeScrollValue: number = 400;
+  listenerTarget: 'window' | 'body';
   /** 表示フラグ */
   isActive: boolean;
 
@@ -40,10 +41,10 @@ export class ScrollTopButtonComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnInit() {
+    this.listenerTarget = (window.ontouchstart === null) ? 'body' : 'window';
     this.ngZone.runOutsideAngular(() => {
       // スクロールイベントはAngular外で購読する
-      this.removeListener = this.renderer.listen('window', 'scroll', () => {
-
+      this.removeListener = this.renderer.listen(this.listenerTarget, 'scroll', () => {
         const nextActive = this.getActive();
         // isActiveが変わった場合のみ、Angular内で動作させて、
         // isActiveを書き換える

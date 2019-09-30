@@ -24,7 +24,8 @@
   </div>
   <div class="main-content container">
 
-    <section class="section what-gamoyon js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+    <section class="section what-gamoyon js-opacity js-translate-y" scrollStyle
+              [offsetHeight]="windowHeight/3">
       <div class="circle-content c1 parallax-el" data-speed-y="-25" data-offset="0"></div>
       <div class="circle-content c4 parallax-el" data-speed-y="-30" data-offset="100"></div>
       <h2 class="heading-content" #gamoyon>
@@ -80,6 +81,7 @@
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content js-opacity" scrollStyle
+
              [offsetHeight]="windowHeight/3">
           <div class="hidden-xs"></div>
           <div class="description-text">
@@ -109,6 +111,7 @@
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content is-left js-opacity" scrollStyle
+
              [offsetHeight]="windowHeight/3">
           <div class="hidden-xs hidden-sm"></div>
           <div class="description-text">
@@ -144,7 +147,7 @@
           ></div>
         </div>
         <div class="col-md-6 col-sm-6 description-content js-opacity"
-             scrollStyle [offsetHeight]="windowHeight/3">
+             scrollStyle  [offsetHeight]="windowHeight/3">
           <div class="hidden-xs"></div>
           <div class="description-text">
             café de GAMOYON では毎年ライブと並行してワークショップが開催されています。<br>
@@ -162,7 +165,8 @@
     <div class="time-table">
       <div class="circle-content c1 parallax-el" data-speed-y="-5" data-offset="400"></div>
       <div class="circle-content c4 parallax-el" data-speed-y="-5" data-offset="400"></div>
-      <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+      <section class="section panel-content js-opacity js-translate-y" scrollStyle
+                [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">Time Table</span>
           <span class="heading-text-jp">タイムテーブル</span>
@@ -177,7 +181,8 @@
     <!--Access-->
     <div class="access">
       <div class="circle-content c6 parallax-el" data-speed-y="-5" data-offset="430"></div>
-      <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+      <section class="section panel-content js-opacity js-translate-y" scrollStyle
+                [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">Access</span>
           <span class="heading-text-jp">アクセス</span>
@@ -209,7 +214,8 @@
       </section>
     </div>
     <!--Attention-->
-    <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+    <section class="section panel-content js-opacity js-translate-y" scrollStyle
+              [offsetHeight]="windowHeight/3">
       <h2 class="heading-content">
         <span class="heading-text">Attention</span>
         <span class="heading-text-jp">注意事項</span>
@@ -342,7 +348,8 @@
     <div class="faq">
       <div class="circle-content c2 parallax-el" data-speed-y="-5" data-offset="730"></div>
       <div class="circle-content c3 parallax-el" data-speed-y="-5" data-offset="730"></div>
-      <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+      <section class="section panel-content js-opacity js-translate-y" scrollStyle
+                [offsetHeight]="windowHeight/3">
         <h2 class="heading-content">
           <span class="heading-text">FAQ</span>
           <span class="heading-text-jp">よくある質問</span>
@@ -477,7 +484,8 @@
       </section>
     </div>
     <!--Support-->
-    <section class="section panel-content js-opacity js-translate-y" scrollStyle [offsetHeight]="windowHeight/3">
+    <section class="section panel-content js-opacity js-translate-y" scrollStyle [listenerTarget]="isTouchDevice ? 'body' : 'window'
+   " [offsetHeight]="windowHeight/3">
       <h2 class="heading-content">
         <span class="heading-text">Support</span>
         <span class="heading-text-jp">協賛</span>
@@ -486,7 +494,8 @@
         <ul class="support-list">
           <li *ngFor="let support of supports"
               class="list-item">
-            <a *ngIf="support.web_url; else elseTemplate" matRipple [href]="getSafeUrl(support.web_url)" target="_blank">
+            <a *ngIf="support.web_url; else elseTemplate" matRipple [href]="getSafeUrl(support.web_url)"
+               target="_blank">
               <img class="logo-image" draggable="false" [src]="support.image_path" [alt]="support.name">
             </a>
             <ng-template #elseTemplate>
@@ -530,7 +539,7 @@
       </div>
     </section>
 
-    <div class="sns-links js-opacity" scrollStyle>
+    <div class="sns-links js-opacity" scrollStyle >
       <!--Insta-->
       <a matRipple
          class="sns-content-link insta"
@@ -581,6 +590,7 @@
   </div>
   <app-footer class="app-footer"></app-footer>
 </div>
+<app-scroll-top-button></app-scroll-top-button>
 <ng-template #messageModal>
   <div class="modal-inner">
     <div class="heading-content text-right">

@@ -54,6 +54,7 @@ export class TopPageComponent implements OnInit {
     const { TOP } = RouteConstant;
     const title: string = TOP.data.description;
     this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
+
     const els = this.el.nativeElement.querySelectorAll('.bg-image');
     if (!els) {
       this.state.isLoaded.next(true);
@@ -64,7 +65,6 @@ export class TopPageComponent implements OnInit {
     imageLoaded(els, { background: true }).on('done', () => {
       this.state.isLoaded.next(true);
       this.isLoaded = true;
-
       setTimeout(() => {
         const topPageEl = this.el.nativeElement.querySelector('.top-page-content');
         this.renderer.addClass(topPageEl, 'moving');

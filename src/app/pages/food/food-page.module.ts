@@ -4,6 +4,7 @@ import { FoodPageComponent } from './food-page/food-page.component';
 import { foodRouting } from './food-page-routing';
 import { FooterModule } from '../../shared/footer/footer.module';
 import { MatRippleModule } from '@angular/material';
+import { ScrollTopButtonModule } from '../../shared/scroll-top-button/scroll-top-button.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MatRippleModule } from '@angular/material';
     foodRouting,
     FooterModule,
     MatRippleModule,
+    ScrollTopButtonModule,
   ]
 })
 export class FoodPageModule {

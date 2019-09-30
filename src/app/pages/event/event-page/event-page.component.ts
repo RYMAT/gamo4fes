@@ -1,8 +1,9 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 import { StateService } from '../../../core/service/state/state.service';
 import { AppConstant, RouteConstant } from '../../../core/constants';
 import { Title } from '@angular/platform-browser';
 import * as imageLoaded from 'imagesloaded';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-event-page',
@@ -13,6 +14,7 @@ export class EventPageComponent implements OnInit {
 
   constructor(private state: StateService,
               private el: ElementRef,
+              @Inject(DOCUMENT) private document: Document,
               private titleService: Title) {
   }
 

@@ -19,6 +19,7 @@ export class ScrollStyleDirective implements OnInit, OnDestroy, AfterViewInit {
   @Input() offsetHeight: number = 0;
   // 発火後にスクロールバックした場合、クラスを除去するかどうか
   @Input() isResetClass: boolean = true;
+  @Input() listenerTarget: 'window' | 'body' = 'window';
 
   targetEl: HTMLElement;
 
@@ -28,11 +29,12 @@ export class ScrollStyleDirective implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit() {
     // change detection回避のため
     this._zone.runOutsideAngular(() => {
-      this._removeListener = this._renderer.listen('window', 'scroll', () => {
+      this._removeListener = this._renderer.listen(this.listenerTarget, 'scroll', () => {
         if (!this.componentPosition) {
           return;
         }
-        const scrollPosition = window.pageYOffset;
+        const scrollPosition = this.getScrollY(window);
+        // console.log(this.getScrollY(window));
         const windowHeight = window.innerHeight;
         if ((scrollPosition + windowHeight) >= (this.componentPosition + this.offsetHeight)) {
           this._renderer.addClass(this.targetEl, this.addClassName);
@@ -42,6 +44,21 @@ export class ScrollStyleDirective implements OnInit, OnDestroy, AfterViewInit {
         }
       });
     });
+  }
+
+  private getScrollY(window) {
+    if (this.listenerTarget === 'window') {
+      if ('scrollY' in window) {
+        return window.scrollY;
+      }
+      if ('pageYOffset' in window) {
+        return window.pageYOffset;
+      }
+      const doc = window.document;
+      return doc.documentElement.scrollTop || doc.body.scrollTop;
+    }
+    const doc = window.document;
+    return doc.documentElement.scrollTop || doc.body.scrollTop;
   }
 
   ngAfterViewInit(): void {

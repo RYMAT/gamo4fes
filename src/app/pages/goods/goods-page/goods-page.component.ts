@@ -1,8 +1,9 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 import { StateService } from '../../../core/service/state/state.service';
 import { Title } from '@angular/platform-browser';
 import { AppConstant, RouteConstant } from '../../../core/constants';
 import * as imageLoaded from 'imagesloaded';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-goods-page',
@@ -13,6 +14,7 @@ export class GoodsPageComponent implements OnInit {
 
   constructor(private state: StateService,
               private el: ElementRef,
+              @Inject(DOCUMENT) private document: Document,
               private titleService: Title) {
   }
 

@@ -11,7 +11,6 @@
           <article matRipple class="food" (click)="onShowFoodModal(shop)">
             <div class="food-image bg-image" [style.background-image]="'url(/'+ shop.food_image_path +')'"></div>
             <span class="food-name">{{shop.name}}</span>
-            <pre>{{shop.food_image_path}}</pre>
           </article>
         </ng-container>
         <div class="food empty hidden-md" *ngIf="shops?.length%4 === 3"></div>
@@ -20,6 +19,8 @@
   </section>
   <app-footer class="app-footer"></app-footer>
 </div>
+<app-scroll-top-button
+></app-scroll-top-button>
 
 <!--ModalのTemplate-->
 <ng-template #shopModalTemplate>

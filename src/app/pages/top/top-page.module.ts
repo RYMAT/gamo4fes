@@ -7,6 +7,7 @@ import { ScrollStyleModule } from '../../shared/scroll-style/scroll-style.module
 import { TooltipModule } from 'ngx-bootstrap';
 import { FooterModule } from '../../shared/footer/footer.module';
 import { MatRippleModule } from '@angular/material';
+import { ScrollTopButtonModule } from '../../shared/scroll-top-button/scroll-top-button.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { MatRippleModule } from '@angular/material';
     TooltipModule,
     FooterModule,
     MatRippleModule,
+    ScrollTopButtonModule,
   ],
   declarations: [TopPageComponent],
 })

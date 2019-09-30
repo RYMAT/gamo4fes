@@ -1,10 +1,11 @@
-import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { animate, AnimationEvent, query, stagger, style, transition, trigger } from '@angular/animations';
 import { StateService } from './core/service/state/state.service';
 import { Subscription } from 'rxjs';
 import { GaService } from './core/service/ga/ga.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { DOCUMENT } from '@angular/common';
 
 declare var luxy;
 
@@ -34,7 +35,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private stateService: StateService,
               private router: Router,
+              @Inject(DOCUMENT) private document: Document,
               private renderer: Renderer2,
+              private zone: NgZone,
               private gaService: GaService) {
     this.subscription.add(this.stateService.isLoaded.subscribe(v => this.onLoad(v)));
   }
@@ -53,8 +56,16 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  // タッチデバイス判定
+  get isTouchDevice() {
+    return (window.ontouchstart === null);
+  }
+
   onActivate() {
     window.scrollTo(0, 0);
+    if (this.isTouchDevice) {
+      this.document.body.scrollTop = 0;
+    }
     // 初回は処理しない
     if (!!this.state) {
       this.setState('change');
@@ -69,13 +80,17 @@ export class AppComponent implements OnInit, OnDestroy {
       this.setState('');
       return;
     }
-    setTimeout(() => {
-      luxy.init({
-        wrapper: '#parallax',
-        targets: '.parallax-el',
-        wrapperSpeed: 0.2
+    if (!this.isTouchDevice) {
+      this.zone.runOutsideAngular(() => {
+        setTimeout(() => {
+          luxy.init({
+            wrapper: '#parallax',
+            targets: '.parallax-el',
+            wrapperSpeed: 0.09
+          });
+        });
       });
-    });
+    }
     this.setState('show');
   }
 
