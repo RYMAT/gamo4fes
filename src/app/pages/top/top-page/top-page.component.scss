@@ -750,6 +750,36 @@
   }
 }
 
+// youtube動画へのリンク
+.youtube-links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 40px 0 0;
+  .youtube-link {
+    width: 240px;
+    margin: 0 24px;
+    height: auto;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 24px;
+    opacity: 1;
+    &:hover, &:focus {
+      opacity: .8;
+      transition: opacity .2s ease 0s;
+    }
+    .label-text {
+      display: block;
+      padding-top: 8px;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: .05em;
+    }
+  }
+}
+
 // SNSのリンク
 .sns-links {
   display: flex;
@@ -757,7 +787,6 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 40px;
   text-align: center;
 }
 
