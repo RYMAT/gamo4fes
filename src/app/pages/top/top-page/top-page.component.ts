@@ -51,9 +51,7 @@ export class TopPageComponent implements OnInit {
   ngOnInit() {
     this.fetchSupports();
     this.fetchGamoyonSupports();
-    const { TOP } = RouteConstant;
-    const title: string = TOP.data.description;
-    this.titleService.setTitle(`${title} | ${AppConstant.PROJECT_TITLE}`);
+    this.titleService.setTitle(AppConstant.PROJECT_TITLE);
 
     const els = this.el.nativeElement.querySelectorAll('.bg-image');
     if (!els) {
