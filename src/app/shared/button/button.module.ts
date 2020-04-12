@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button.component';
-import { MatRippleModule } from '@angular/material';
+import { MatRippleModule } from '@angular/material/core';
 
 
 @NgModule({
